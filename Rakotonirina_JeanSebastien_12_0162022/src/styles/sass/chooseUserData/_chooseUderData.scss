@@ -1,0 +1,48 @@
+body{
+    .chooseUserData{
+            max-width: 50%;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            justify-items: center;
+            align-items: center;
+            text-align: center;
+            row-gap: 20px;
+            position: absolute;
+            top: 250px;
+            left: 50%;
+            background: #020203;
+            padding: 32px;
+            border-radius: 10px;
+            /* bring your own prefixes */
+            transform: translate(-50%, -70%);
+            form{
+                display: flex;
+                flex-direction: column;
+                row-gap: 52px;
+                label{
+                    color: white;
+                }
+            }
+            h1{
+                color: #E60000;
+            }
+            p{
+                color: white;
+            }
+            .custom-select{
+                background: #E60000;
+                color: white;
+                padding: 15px;
+                border-radius: 10px;
+                font-size: 24px;
+            }
+            input[type='submit']{
+                padding: 15px;
+                border-radius: 10px;
+                background: #E60000;
+                color: white;
+                font-size: 24px;
+            }
+    }
+}

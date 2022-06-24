@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <title>JSDoc: Source: components/utils/HandleChange.jsx</title>
+
+    <script src="scripts/prettify/prettify.js"> </script>
+    <script src="scripts/prettify/lang-css.js"> </script>
+    <!--[if lt IE 9]>
+      <script src="//html5shiv.googlecode.com/svn/trunk/html5.js"></script>
+    <![endif]-->
+    <link type="text/css" rel="stylesheet" href="styles/prettify-tomorrow.css">
+    <link type="text/css" rel="stylesheet" href="styles/jsdoc-default.css">
+</head>
+
+<body>
+
+<div id="main">
+
+    <h1 class="page-title">Source: components/utils/HandleChange.jsx</h1>
+
+    
+
+
+
+    
+    <section>
+        <article>
+            <pre class="prettyprint source linenums"><code>import {
+    useState, useEffect
+} from "react";
+
+/**
+ * Switches between 2 ids and in each switches betwween 4 urls endPoints
+ * @param { Number } id props user id
+ * @param { Url } url endPoints url
+ * @returns { Object } data (object), isLoading (boolean), error, url (string)
+ */
+function HandleChange(id, url) {
+    /**
+     * Statements initialiazing object, booleans 
+     */
+    const [data, setData] = useState({})
+    const [isLoading, setLoading] = useState(true)
+    const [error, setError] = useState(false)
+    /**
+     * Swicthes between 2 ids in each switches between 4 urls endPonts
+     */
+    switch (id) {
+        case 12:
+        default:
+            switch(url){
+                case 0:
+                default:
+                    url = "http://localhost:5000/user/"+id;
+                    break;
+                case 1:
+                    url = "http://localhost:5000/user/"+id+"/activity"
+                    break;
+                case 2:
+                    url = "http://localhost:5000/user/"+id+"/average-sessions"
+                    break;                
+                case 3:
+                    url = "http://localhost:5000/user/"+id+"/performance"
+                    break;
+            }
+        break;
+        case 18:
+            switch(url){
+                case 0:
+                default:
+                    url = "http://localhost:5000/user/"+id;
+                    break;
+                case 1:
+                    url = "http://localhost:5000/user/"+id+"/activity"
+                    break;
+                case 2:
+                    url = "http://localhost:5000/user/"+id+"/average-sessions"
+                    break;                
+                case 3:
+                    url = "http://localhost:5000/user/"+id+"/performance"
+                    break;
+            }
+        break;
+        }
+/**
+ * Allows us to inject lifeCycle notion Hook (ComponentDidiMount, ComponentWillMount...) inside components functions
+ * here fetchData
+ */
+    useEffect(() => {
+        if (!url) return
+        /**
+         * boolean state at true
+         */
+        setLoading(true)
+        /**
+         * Fetches API to get data
+         * 
+         */
+        async function fetchData() {
+            try {
+                /**
+                 * The fetch takes the location of the resource as an argument
+                 */
+                const response = await fetch(url, {})
+                /**
+                 *  returns a promise as response 
+                 */
+                const data = await response.json()
+                /**
+                 * Data Object state changes
+                 */
+                setData(data)
+
+            } catch (err) {
+                console.log(err)
+                /**
+                 * error boolean state at true
+                 */
+                setError(true)
+            } finally {
+                /**
+                 * isLoading boolean state at false
+                 */
+                setLoading(false)
+            }
+        }
+        fetchData()
+    }, [url])
+    
+    return { data, isLoading, error, url }    
+    
+};
+
+export default HandleChange;</code></pre>
+        </article>
+    </section>
+
+
+
+
+</div>
+
+<nav>
+    <h2><a href="index.html">Home</a></h2><h3>Global</h3><ul><li><a href="global.html#App">App</a></li><li><a href="global.html#DBarChart">DBarChart</a></li><li><a href="global.html#GetUserActivityData">GetUserActivityData</a></li><li><a href="global.html#GetUserMainData">GetUserMainData</a></li><li><a href="global.html#GetUserPerformance">GetUserPerformance</a></li><li><a href="global.html#GetUserSessionsData">GetUserSessionsData</a></li><li><a href="global.html#HandleChange">HandleChange</a></li><li><a href="global.html#HorizontalMenu">HorizontalMenu</a></li><li><a href="global.html#NotFound">NotFound</a></li><li><a href="global.html#RightBloc">RightBloc</a></li><li><a href="global.html#RLineChart">RLineChart</a></li><li><a href="global.html#RPieChart">RPieChart</a></li><li><a href="global.html#RRadarChart">RRadarChart</a></li><li><a href="global.html#UserActivityData">UserActivityData</a></li><li><a href="global.html#UserActivityDataItem">UserActivityDataItem</a></li><li><a href="global.html#UserMainData">UserMainData</a></li><li><a href="global.html#UserMainDataItem">UserMainDataItem</a></li><li><a href="global.html#UserPerformanceData">UserPerformanceData</a></li><li><a href="global.html#UserPerformanceItem">UserPerformanceItem</a></li><li><a href="global.html#UserSessionsData">UserSessionsData</a></li><li><a href="global.html#UserSessionsDataItem">UserSessionsDataItem</a></li><li><a href="global.html#VerticalMenu">VerticalMenu</a></li></ul>
+</nav>
+
+<br class="clear">
+
+<footer>
+    Documentation generated by <a href="https://github.com/jsdoc/jsdoc">JSDoc 3.6.10</a> on Thu Jun 23 2022 22:46:25 GMT+0200 (heure d’été d’Europe centrale)
+</footer>
+
+<script> prettyPrint(); </script>
+<script src="scripts/linenumber.js"> </script>
+</body>
+</html>

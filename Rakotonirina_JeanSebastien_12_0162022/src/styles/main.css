@@ -1,0 +1,361 @@
+@import url("https://fonts.googleapis.com/css2?family=Roboto&display=swap");
+body .chooseUserData {
+  max-width: 50%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  justify-items: center;
+  align-items: center;
+  text-align: center;
+  row-gap: 20px;
+  position: absolute;
+  top: 250px;
+  left: 50%;
+  background: #020203;
+  padding: 32px;
+  border-radius: 10px;
+  /* bring your own prefixes */
+  transform: translate(-50%, -70%);
+}
+body .chooseUserData form {
+  display: flex;
+  flex-direction: column;
+  row-gap: 52px;
+}
+body .chooseUserData form label {
+  color: white;
+}
+body .chooseUserData h1 {
+  color: #E60000;
+}
+body .chooseUserData p {
+  color: white;
+}
+body .chooseUserData .custom-select {
+  background: #E60000;
+  color: white;
+  padding: 15px;
+  border-radius: 10px;
+  font-size: 24px;
+}
+body .chooseUserData input[type=submit] {
+  padding: 15px;
+  border-radius: 10px;
+  background: #E60000;
+  color: white;
+  font-size: 24px;
+}
+
+/********************* couleurs et texte******************************************
+             primaire #9356DC secondaire #FF79DA tertiaire #99E2D0
+                           Texte Roboto
+**********************************************************************************/
+body {
+  margin: 0;
+  position: relative;
+  font-family: "Roboto";
+}
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+a {
+  text-decoration: none;
+  color: black;
+}
+
+img {
+  border: none;
+}
+
+h1 {
+  font-size: 24px;
+}
+
+p {
+  font-size: 18px;
+}
+
+ul {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+}
+
+#root {
+  max-width: 100%;
+  max-height: 1024px;
+  margin: 80px auto;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.navBar, .menu-graph-bloc {
+  flex: 1;
+}
+
+@media screen and (max-width: 1023px) {
+  #root {
+    display: none;
+  }
+}
+.sportSee-main {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  row-gap: 15px;
+}
+.sportSee-main h2 {
+  text-align: left;
+  padding: 32px 0 0 70px;
+}
+.sportSee-main p {
+  padding: 0 0 0 70px;
+}
+
+.spotSee-main-bloc {
+  width: 100%;
+  height: 928px;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: space-around;
+  align-items: center;
+}
+
+.sportSee-main-graph {
+  width: 835px;
+  height: 90%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+  align-items: center;
+  row-gap: 50px;
+}
+.sportSee-main-graph .sportSee-main-grapBloc {
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-evenly;
+  align-items: center;
+  column-gap: 21px;
+}
+
+.sportSee-main-right {
+  width: 22%;
+  height: 80%;
+  padding: 0;
+  margin: 0;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  align-items: flex-start;
+  row-gap: 39px;
+}
+.sportSee-main-right .sportSee-main-calories,
+.sportSee-main-right .sportSee-main-protein,
+.sportSee-main-right .sportSee-main-carbohydrate,
+.sportSee-main-right .sportSee-main-lipid {
+  width: 258px;
+  height: 124px;
+  border-radius: 5px;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: nowrap;
+  justify-content: space-around;
+  justify-items: center;
+  align-items: center;
+  background: #FBFBFB;
+}
+.sportSee-main-right .sportSee-main-calories .sportSee-main-calImg,
+.sportSee-main-right .sportSee-main-protein .sportSee-main-calImg,
+.sportSee-main-right .sportSee-main-carbohydrate .sportSee-main-calImg,
+.sportSee-main-right .sportSee-main-lipid .sportSee-main-calImg {
+  width: 60px;
+  height: 60px;
+  padding: 21px;
+  margin-left: 12px;
+  border-radius: 5px;
+}
+.sportSee-main-right .sportSee-main-calories .sportSee-main-calImg img,
+.sportSee-main-right .sportSee-main-protein .sportSee-main-calImg img,
+.sportSee-main-right .sportSee-main-carbohydrate .sportSee-main-calImg img,
+.sportSee-main-right .sportSee-main-lipid .sportSee-main-calImg img {
+  width: 15px;
+  height: 20px;
+}
+.sportSee-main-right .sportSee-main-calories .sportSee-main-calBloc,
+.sportSee-main-right .sportSee-main-protein .sportSee-main-calBloc,
+.sportSee-main-right .sportSee-main-carbohydrate .sportSee-main-calBloc,
+.sportSee-main-right .sportSee-main-lipid .sportSee-main-calBloc {
+  display: flex;
+  flex-direction: column;
+}
+.sportSee-main-right .sportSee-main-calories .sportSee-main-calBloc .sportSee-main-calNum,
+.sportSee-main-right .sportSee-main-protein .sportSee-main-calBloc .sportSee-main-calNum,
+.sportSee-main-right .sportSee-main-carbohydrate .sportSee-main-calBloc .sportSee-main-calNum,
+.sportSee-main-right .sportSee-main-lipid .sportSee-main-calBloc .sportSee-main-calNum {
+  width: 91px;
+  font-size: 20px;
+  margin-right: 51px;
+  font-weight: 500;
+}
+.sportSee-main-right .sportSee-main-calories .sportSee-main-calBloc .sportSee-main-calText,
+.sportSee-main-right .sportSee-main-protein .sportSee-main-calBloc .sportSee-main-calText,
+.sportSee-main-right .sportSee-main-carbohydrate .sportSee-main-calBloc .sportSee-main-calText,
+.sportSee-main-right .sportSee-main-lipid .sportSee-main-calBloc .sportSee-main-calText {
+  font-size: 14px;
+}
+.sportSee-main-right .sportSee-main-calories .sportSee-main-calImg {
+  background: #ffcccc;
+}
+.sportSee-main-right .sportSee-main-protein .sportSee-main-calImg {
+  background: #e3f4ff;
+}
+.sportSee-main-right .sportSee-main-carbohydrate .sportSee-main-calImg {
+  background: #fdefb8;
+}
+.sportSee-main-right .sportSee-main-lipid .sportSee-main-calImg {
+  background: #ffe8ef;
+}
+
+.sportSee-activity {
+  width: 835px;
+  height: 320px;
+}
+
+.sportSee-sessions,
+.sportSee-performance,
+.sportSee-score {
+  width: 258px;
+  height: 300px;
+  background: #FBFBFB;
+  border-radius: 5px;
+}
+
+.sportSee-sessions {
+  position: relative;
+  text-align: center;
+  background: #FF0000;
+}
+.sportSee-sessions h2.text-sessions {
+  position: absolute;
+  top: 0;
+  left: -34px;
+  font-size: 15px;
+  color: white;
+  font-weight: 500;
+}
+
+.sportSee-score {
+  position: relative;
+  line-height: 26px;
+}
+.sportSee-score .sportSee-pie-scoreTitle {
+  font-size: 26px;
+  font-weight: 700;
+}
+.sportSee-score .sportSee-pie-scoreText {
+  font-weight: lighter;
+}
+.sportSee-score h2.sportSee-pie {
+  font-size: 16px;
+  position: absolute;
+  top: 83px;
+  left: 13%;
+}
+
+.sportSee-performance .recharts-wrapper {
+  background: #282D30;
+  border-radius: 5px;
+}
+
+.sportSee-activity-item {
+  width: 100%;
+  margin: 5px;
+  padding: 5px;
+  background: #FBFBFB;
+  border-radius: 5px;
+  box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.0212249);
+  text-align: center;
+}
+.sportSee-activity-item h2 {
+  font-size: 15px;
+  padding: 5px 0 10px 5px;
+}
+
+.sportSee-sessions-item,
+.sportSee-performance-item,
+.sportSee-score-item {
+  margin: 5px;
+  padding: 5px;
+  background: #FBFBFB;
+  border-radius: 5px;
+  box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.0212249);
+}
+
+canvas {
+  width: 100%;
+}
+
+.navBar {
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  align-items: center;
+  column-gap: 31px;
+  font-size: 24px;
+  background: #020203;
+  color: white;
+}
+.navBar li:nth-child(1) {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: nowrap;
+  align-items: center;
+  margin: 0;
+  color: #E60000;
+}
+.navBar li {
+  max-width: 23%;
+  padding: 31px;
+  margin-left: 31px;
+}
+.navBar a {
+  color: white;
+}
+
+.menu-graph-bloc {
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+  column-gap: 20px;
+  justify-content: space-between;
+}
+.menu-graph-bloc ul.vertical-nav {
+  width: 117px;
+  margin: 0;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  row-gap: 31px;
+  background: #020203;
+  list-style-type: none;
+  text-align: center;
+}
+.menu-graph-bloc ul.vertical-nav li {
+  margin: 0;
+  width: 117px;
+}
+.menu-graph-bloc ul.vertical-nav a {
+  color: white;
+}
+
+/*# sourceMappingURL=main.css.map */
