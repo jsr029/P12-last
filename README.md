@@ -2,4 +2,4 @@
 Openclassrooms project 12 : Developp an analytics dashboard with react
 
 # jsDocs
-[Here](https://github.com/jsr029/P12-last/blob/master/Rakotonirina_JeanSebastien_12_0162022/docs/)
+[Here](https://jsr029.github.io/P12-last/Rakotonirina_JeanSebastien_12_01062022/docs/)
