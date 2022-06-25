@@ -4,39 +4,17 @@ import GetUserActivityData from '../../pages/GetUserActivityData'
 import GetUserSessionsData from '../../pages/GetUserSessionsData'
 import RightBloc from '../RightBloc'
 import RPieChart from '../RPieChart'
-
+import PropTypes from 'prop-types'
 /** 
  * Retrieves all data we need from all endpoints
- * 
- * Uses components :
- * - GetUserActivityData component gets user activity data for Bar chart
- * - GetUserSessionsData  component gets user average sessions data for Line chart
- * - GetUserPerformance component gets user performance data for radar chart
- * - RPieChart component gets user score data for pie chart
- * - RightBloc component gets user data for displaying calories, lipid, protein and glucid counts in the right bloc
- * 
+ *  * 
  * @param { Object } props 
- * Object passed in props which contains
- * {
- *  "datas": {
- *      "id": 12,
- *      "userInfos": {
- *          "firstName": "Karl",
- *          "lastName": "Dovineau",
- *          "age": 31
- *      },
- *      "score": 0.12,
- *      "keyData": {
- *          "calorieCount": 1930,
- *          "proteinCount": 155,
- *          "carbohydrateCount": 290,
- *          "lipidCount": 50
- *      }
- *  },
- *  "id": "12"
- *  }
+ * {datas:{datas:{id,userInfos{...}, score, keyData:{...}},
+ * {userId, sessions:Array(7)},
+ * {userId, kind:{...}, data:Array(6)},
+ * {userId, sessions:Array(7)}}}
  * @returns { Component } 
- * - GeteUserActivityData
+ * - GetUserActivityData
  * - GetUserSessionsData
  * - GetUserPerformance
  * - RPieChart
@@ -44,7 +22,7 @@ import RPieChart from '../RPieChart'
 */
 
 function UserMainData(props) {
-     /**Datas from http://localhost:3000/user/${userId} endpoint */
+    console.log(props)
     const USERMAINNAME = props.datas.datas[0].userInfos.firstName
     const USERMAINCAL = props.datas.datas[0].keyData.calorieCount
     const USERMAINPRO = props.datas.datas[0].keyData.proteinCount
@@ -79,5 +57,7 @@ function UserMainData(props) {
          </>
     )
 };
-
+UserMainData.propTypes = {
+    USERMAINNAME : PropTypes.string
+}
 export default UserMainData

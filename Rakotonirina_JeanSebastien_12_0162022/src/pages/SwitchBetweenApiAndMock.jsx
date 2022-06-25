@@ -6,7 +6,7 @@ import GetUserMainData from './GetUserMainData';
 
 /**
  * Switches between Api and Mocked one
- * @return { Component } GetUserMainData {...data2} or {...data3}, depends on the click choice 
+ * @return { Component } GetUserMainData with one of 2 props {...data2} or {...data3}, depends on the click choice 
  */
 const SwitchBetweenApiAndMock = () => {
     /**
