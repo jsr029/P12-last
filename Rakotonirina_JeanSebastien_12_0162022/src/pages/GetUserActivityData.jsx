@@ -1,6 +1,6 @@
 import React from 'react'
 import UserActivityData from '../components/UserActivityData'
-
+import PropTypes from 'prop-types'
 /**
  * Gets user activity data 
  * @param { number } props.id  
@@ -14,4 +14,8 @@ function GetUserActivityData(props) {
 		</React.Fragment>
 	)
 };
+GetUserActivityData.propTypes = {
+    id : PropTypes.number
+}
+
 export default GetUserActivityData

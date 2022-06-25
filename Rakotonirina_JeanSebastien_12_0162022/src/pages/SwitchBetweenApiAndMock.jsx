@@ -30,27 +30,28 @@ const SwitchBetweenApiAndMock = () => {
      */
     const [data3, setData3] = useState({})
     /**
-     * Retrieves api data from Handle4Urls function by id
-     */
-    const { data, isLoading, error } = Handle4Urls(id)
-    /**
      * Retrieves mocked api data from HandleMockedData function 
      */
     const {  mockedData } = HandleMockedData(id)
-    const [hideBySass, setHideBySass] = useState(false)
-    function handleHide(){
-        setHideBySass((prevState) => (!prevState ))
-    }
-    const apiHandler = (e) => {
-        setApi(true);
-        setMockedApi(false);
-        setData2({ data, isLoading, error })
-        };
-    const mockedapiHandler = () => {
+     const mockedapiHandler = () => {
         setApi(false);
         setMockedApi(true);
         setData3({ mockedData })
     };
+   /**
+     * Retrieves api data from Handle4Urls function by id
+     */
+    const { data, isLoading, error } = Handle4Urls(id)
+        //console.clear()
+    const [hideBySass, setHideBySass] = useState(false)
+    function handleHide(){
+        setHideBySass((prevState) => (!prevState ))
+    }
+    const apiHandler = () => {
+        setApi(true);
+        setMockedApi(false);
+        setData2({ data, isLoading, error })
+        };
      return (
         <React.Fragment>
         <div className={"sportSee-switcher-button " + (hideBySass ? "visible" : "hidden")}>

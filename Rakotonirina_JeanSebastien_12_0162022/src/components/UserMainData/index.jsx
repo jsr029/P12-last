@@ -22,7 +22,6 @@ import PropTypes from 'prop-types'
 */
 
 function UserMainData(props) {
-    console.log(props)
     const USERMAINNAME = props.datas.datas[0].userInfos.firstName
     const USERMAINCAL = props.datas.datas[0].keyData.calorieCount
     const USERMAINPRO = props.datas.datas[0].keyData.proteinCount
@@ -58,6 +57,10 @@ function UserMainData(props) {
     )
 };
 UserMainData.propTypes = {
-    USERMAINNAME : PropTypes.string
+    USERMAINNAME : PropTypes.string,
+    USERMAINCAL : PropTypes.number,
+    USERMAINCAR : PropTypes.number,
+    USERMAINLIP : PropTypes.number,
+    USERMAINPRO : PropTypes.number
 }
 export default UserMainData
