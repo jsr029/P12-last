@@ -28,12 +28,9 @@
         <article>
             <pre class="prettyprint source linenums"><code>import React from 'react'
 import UserMainData from '../components/UserMainData'
-import { useParams } from 'react-router-dom'
 import HorizontalMenu from '../components/HorizontalMenu'
 import VerticalMenu from '../components/VerticalMenu'
-import Handle4Urls from '../components/utils/Handle4Urls'
-import HandleMockedData from '../components/utils/HandleMockedData'
-
+import PropTypes from 'prop-types';
 /**
  * 
  * Retrieves the id with useParams hook and pass it in the url with useFetch hook
@@ -43,11 +40,11 @@ import HandleMockedData from '../components/utils/HandleMockedData'
  * Gets the user datas infos
  * @returns { Component } HorizontalMenu, VerticalMenu, UserMainData 
  */
-function GetUserMainData() {
+function GetUserMainData(props) {
+	console.log(props)
 		/**
 	 * Retrieves the id by useParms hook function
 	 */
-	const id = useParams().id
 	/**
 	 * Puts conditions :
 	 * - if id!=12 and id!=18 returns error 404 page inside &lt;NotFound /> component
@@ -59,9 +56,6 @@ function GetUserMainData() {
 		 * corresponding at first endPoints url in the switch
 		 */
 
-	const { data, isLoading } = Handle4Urls(id)
-	const { mockedData, isPending } = HandleMockedData(12) 
-	console.log(data.datas)
 	/**
 	 * @returns { String } 'Il y a un probleme' if error 
 	 */
@@ -72,15 +66,29 @@ function GetUserMainData() {
 	 * 
 	 * else returns &lt;HorizontalMenu/>, &lt;VerticalMenu /> and &lt;UserMainData /> components
 	 */
-	return isLoading ? &lt;div>Chargement...&lt;/div> :(
-		&lt;React.Fragment>
-		&lt;HorizontalMenu />
-		&lt;div className='menu-graph-bloc'>
-			&lt;VerticalMenu />
-			&lt;UserMainData datas={data.datas} />
-		&lt;/div>
-		&lt;/React.Fragment>
-	)
+	if(!props.mockedData){
+		return (
+			&lt;React.Fragment>
+			&lt;HorizontalMenu />
+			&lt;div className='menu-graph-bloc'>
+				&lt;VerticalMenu />
+				&lt;UserMainData datas={props.data} />
+			&lt;/div>
+			&lt;/React.Fragment>
+		)
+	}
+	if(props.mockedData){
+		return (
+			&lt;React.Fragment>
+			&lt;HorizontalMenu />
+			&lt;div className='menu-graph-bloc'>
+				&lt;VerticalMenu />
+				&lt;UserMainData datas={props.mockedData} />
+			&lt;/div>
+			&lt;/React.Fragment>
+		)
+	}
+
 	
 };
 
@@ -94,13 +102,13 @@ export default GetUserMainData</code></pre>
 </div>
 
 <nav>
-    <h2><a href="index.html">Home</a></h2><h3>Global</h3><ul><li><a href="global.html#App">App</a></li><li><a href="global.html#DBarChart">DBarChart</a></li><li><a href="global.html#GetUserActivityData">GetUserActivityData</a></li><li><a href="global.html#GetUserMainData">GetUserMainData</a></li><li><a href="global.html#GetUserPerformance">GetUserPerformance</a></li><li><a href="global.html#GetUserSessionsData">GetUserSessionsData</a></li><li><a href="global.html#HandleChange">HandleChange</a></li><li><a href="global.html#HorizontalMenu">HorizontalMenu</a></li><li><a href="global.html#NotFound">NotFound</a></li><li><a href="global.html#RightBloc">RightBloc</a></li><li><a href="global.html#RLineChart">RLineChart</a></li><li><a href="global.html#RPieChart">RPieChart</a></li><li><a href="global.html#RRadarChart">RRadarChart</a></li><li><a href="global.html#UserActivityData">UserActivityData</a></li><li><a href="global.html#UserActivityDataItem">UserActivityDataItem</a></li><li><a href="global.html#UserMainData">UserMainData</a></li><li><a href="global.html#UserMainDataItem">UserMainDataItem</a></li><li><a href="global.html#UserPerformanceData">UserPerformanceData</a></li><li><a href="global.html#UserPerformanceItem">UserPerformanceItem</a></li><li><a href="global.html#UserSessionsData">UserSessionsData</a></li><li><a href="global.html#UserSessionsDataItem">UserSessionsDataItem</a></li><li><a href="global.html#VerticalMenu">VerticalMenu</a></li></ul>
+    <h2><a href="index.html">Home</a></h2><h3>Global</h3><ul><li><a href="global.html#App">App</a></li><li><a href="global.html#DBarChart">DBarChart</a></li><li><a href="global.html#GetUserActivityData">GetUserActivityData</a></li><li><a href="global.html#GetUserMainData">GetUserMainData</a></li><li><a href="global.html#GetUserPerformance">GetUserPerformance</a></li><li><a href="global.html#GetUserSessionsData">GetUserSessionsData</a></li><li><a href="global.html#HandleChange">HandleChange</a></li><li><a href="global.html#HorizontalMenu">HorizontalMenu</a></li><li><a href="global.html#NotFound">NotFound</a></li><li><a href="global.html#RightBloc">RightBloc</a></li><li><a href="global.html#RLineChart">RLineChart</a></li><li><a href="global.html#RPieChart">RPieChart</a></li><li><a href="global.html#RRadarChart">RRadarChart</a></li><li><a href="global.html#SwitchBetweenApiAndMock">SwitchBetweenApiAndMock</a></li><li><a href="global.html#UserActivityData">UserActivityData</a></li><li><a href="global.html#UserActivityDataItem">UserActivityDataItem</a></li><li><a href="global.html#UserMainData">UserMainData</a></li><li><a href="global.html#UserMainDataItem">UserMainDataItem</a></li><li><a href="global.html#UserPerformanceData">UserPerformanceData</a></li><li><a href="global.html#UserPerformanceItem">UserPerformanceItem</a></li><li><a href="global.html#UserSessionsData">UserSessionsData</a></li><li><a href="global.html#UserSessionsDataItem">UserSessionsDataItem</a></li><li><a href="global.html#VerticalMenu">VerticalMenu</a></li></ul>
 </nav>
 
 <br class="clear">
 
 <footer>
-    Documentation generated by <a href="https://github.com/jsdoc/jsdoc">JSDoc 3.6.10</a> on Fri Jun 24 2022 17:54:56 GMT+0200 (heure d’été d’Europe centrale)
+    Documentation generated by <a href="https://github.com/jsdoc/jsdoc">JSDoc 3.6.10</a> on Sat Jun 25 2022 14:38:29 GMT+0200 (heure d’été d’Europe centrale)
 </footer>
 
 <script> prettyPrint(); </script>

@@ -4,6 +4,10 @@ import Handle4Urls from '../components/utils/Handle4Urls';
 import HandleMockedData from '../components/utils/HandleMockedData';
 import GetUserMainData from './GetUserMainData';
 
+/**
+ * Switches between Api and Mocked one
+ * @return { Component } GetUserMainData {...data2} or {...data3}, depends on the click choice 
+ */
 const SwitchBetweenApiAndMock = () => {
     /**
      * Retrieves the id passed in the url

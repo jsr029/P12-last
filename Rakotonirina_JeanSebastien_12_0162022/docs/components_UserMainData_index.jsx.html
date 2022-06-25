@@ -73,12 +73,12 @@ import RPieChart from '../RPieChart'
 
 function UserMainData(props) {
      /**Datas from http://localhost:3000/user/${userId} endpoint */
-    const USERMAINNAME = props.datas[0].userInfos.firstName
-    const USERMAINCAL = props.datas[0].keyData.calorieCount
-    const USERMAINPRO = props.datas[0].keyData.proteinCount
-    const USERMAINCAR = props.datas[0].keyData.carbohydrateCount
-    const USERMAINLIP = props.datas[0].keyData.lipidCount
-    /** end Datas */
+    const USERMAINNAME = props.datas.datas[0].userInfos.firstName
+    const USERMAINCAL = props.datas.datas[0].keyData.calorieCount
+    const USERMAINPRO = props.datas.datas[0].keyData.proteinCount
+    const USERMAINCAR = props.datas.datas[0].keyData.carbohydrateCount
+    const USERMAINLIP = props.datas.datas[0].keyData.lipidCount
+    /** end Datas.data.datas */
 
     return (
         &lt;>
@@ -87,12 +87,12 @@ function UserMainData(props) {
                 &lt;p>Félicitation ! Vous avez explosé vos objectifs hier &lt;span role='img' aria-label='emoji'>👏&lt;/span>&lt;/p>
                 &lt;div className='spotSee-main-bloc'>
                     &lt;div className='sportSee-main-graph'>
-                        &lt;GetUserActivityData id={props.datas[0].id} data={props.datas[1]} />
+                        &lt;GetUserActivityData id={props.datas.datas[0].id} data={props.datas.datas[1]} />
                         &lt;div className='sportSee-main-grapBloc'>
-                            &lt;GetUserSessionsData id={props.datas[0].id}  data={props.datas[3]} />
-                            &lt;GetUserPerformance  id={props.datas[0].id}  data={props.datas[2]} />
+                            &lt;GetUserSessionsData id={props.datas.datas[0].id}  data={props.datas.datas[3]} />
+                            &lt;GetUserPerformance  id={props.datas.datas[0].id}  data={props.datas.datas[2]} />
                             &lt;div className='sportSee-score'>
-                                &lt;RPieChart scoreUser={props.datas[0]} />
+                                &lt;RPieChart scoreUser={props.datas.datas[0]} />
                             &lt;/div>
                         &lt;/div>
                     &lt;/div>
@@ -118,13 +118,13 @@ export default UserMainData</code></pre>
 </div>
 
 <nav>
-    <h2><a href="index.html">Home</a></h2><h3>Global</h3><ul><li><a href="global.html#App">App</a></li><li><a href="global.html#DBarChart">DBarChart</a></li><li><a href="global.html#GetUserActivityData">GetUserActivityData</a></li><li><a href="global.html#GetUserMainData">GetUserMainData</a></li><li><a href="global.html#GetUserPerformance">GetUserPerformance</a></li><li><a href="global.html#GetUserSessionsData">GetUserSessionsData</a></li><li><a href="global.html#HandleChange">HandleChange</a></li><li><a href="global.html#HorizontalMenu">HorizontalMenu</a></li><li><a href="global.html#NotFound">NotFound</a></li><li><a href="global.html#RightBloc">RightBloc</a></li><li><a href="global.html#RLineChart">RLineChart</a></li><li><a href="global.html#RPieChart">RPieChart</a></li><li><a href="global.html#RRadarChart">RRadarChart</a></li><li><a href="global.html#UserActivityData">UserActivityData</a></li><li><a href="global.html#UserActivityDataItem">UserActivityDataItem</a></li><li><a href="global.html#UserMainData">UserMainData</a></li><li><a href="global.html#UserMainDataItem">UserMainDataItem</a></li><li><a href="global.html#UserPerformanceData">UserPerformanceData</a></li><li><a href="global.html#UserPerformanceItem">UserPerformanceItem</a></li><li><a href="global.html#UserSessionsData">UserSessionsData</a></li><li><a href="global.html#UserSessionsDataItem">UserSessionsDataItem</a></li><li><a href="global.html#VerticalMenu">VerticalMenu</a></li></ul>
+    <h2><a href="index.html">Home</a></h2><h3>Global</h3><ul><li><a href="global.html#App">App</a></li><li><a href="global.html#DBarChart">DBarChart</a></li><li><a href="global.html#GetUserActivityData">GetUserActivityData</a></li><li><a href="global.html#GetUserMainData">GetUserMainData</a></li><li><a href="global.html#GetUserPerformance">GetUserPerformance</a></li><li><a href="global.html#GetUserSessionsData">GetUserSessionsData</a></li><li><a href="global.html#HandleChange">HandleChange</a></li><li><a href="global.html#HorizontalMenu">HorizontalMenu</a></li><li><a href="global.html#NotFound">NotFound</a></li><li><a href="global.html#RightBloc">RightBloc</a></li><li><a href="global.html#RLineChart">RLineChart</a></li><li><a href="global.html#RPieChart">RPieChart</a></li><li><a href="global.html#RRadarChart">RRadarChart</a></li><li><a href="global.html#SwitchBetweenApiAndMock">SwitchBetweenApiAndMock</a></li><li><a href="global.html#UserActivityData">UserActivityData</a></li><li><a href="global.html#UserActivityDataItem">UserActivityDataItem</a></li><li><a href="global.html#UserMainData">UserMainData</a></li><li><a href="global.html#UserMainDataItem">UserMainDataItem</a></li><li><a href="global.html#UserPerformanceData">UserPerformanceData</a></li><li><a href="global.html#UserPerformanceItem">UserPerformanceItem</a></li><li><a href="global.html#UserSessionsData">UserSessionsData</a></li><li><a href="global.html#UserSessionsDataItem">UserSessionsDataItem</a></li><li><a href="global.html#VerticalMenu">VerticalMenu</a></li></ul>
 </nav>
 
 <br class="clear">
 
 <footer>
-    Documentation generated by <a href="https://github.com/jsdoc/jsdoc">JSDoc 3.6.10</a> on Fri Jun 24 2022 17:54:56 GMT+0200 (heure d’été d’Europe centrale)
+    Documentation generated by <a href="https://github.com/jsdoc/jsdoc">JSDoc 3.6.10</a> on Sat Jun 25 2022 14:38:29 GMT+0200 (heure d’été d’Europe centrale)
 </footer>
 
 <script> prettyPrint(); </script>
