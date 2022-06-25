@@ -1,8 +1,25 @@
 .sportSee-switcher-button{
-    width: 100%;
-        text-align: center;
+    max-width: 50%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    justify-items: center;
+    align-items: center;
+    text-align: center;
+    row-gap: 20px;
+    position: absolute;
+    top: 250px;
+    left: 50%;
+    background: #020203;
+    padding: 32px;
+    border-radius: 10px;
+    /* bring your own prefixes */
+    transform: translate(-50%, -70%);    
+    z-index: 100;
+    color:white;
     button{
-        width: 15%;
+        font-family: 'Roboto';
+        font-size: 16px;
         background: red;
         color: white;
         padding: 10px;
@@ -13,4 +30,7 @@
             color: darken(white, 10%);
         }
     }
-}
+}    
+.visible{
+        display: none;
+    }

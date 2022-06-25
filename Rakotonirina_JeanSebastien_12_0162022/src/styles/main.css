@@ -359,11 +359,28 @@ canvas {
 }
 
 .sportSee-switcher-button {
-  width: 100%;
+  max-width: 50%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  justify-items: center;
+  align-items: center;
   text-align: center;
+  row-gap: 20px;
+  position: absolute;
+  top: 250px;
+  left: 50%;
+  background: #020203;
+  padding: 32px;
+  border-radius: 10px;
+  /* bring your own prefixes */
+  transform: translate(-50%, -70%);
+  z-index: 100;
+  color: white;
 }
 .sportSee-switcher-button button {
-  width: 15%;
+  font-family: "Roboto";
+  font-size: 16px;
   background: red;
   color: white;
   padding: 10px;
@@ -373,6 +390,10 @@ canvas {
 .sportSee-switcher-button button:hover {
   background: #ff3333;
   color: #e6e6e6;
+}
+
+.visible {
+  display: none;
 }
 
 /*# sourceMappingURL=main.css.map */

@@ -6,7 +6,7 @@ function HandleMockedData(id) {
     const [mockedData, setMockedData] = useState({})
     const [isPending, setIsPending] = useState(true)
     const [error, setError] = useState(null)
-        const url = `http://127.0.0.1:3000/mockedjson/data.json`
+        const url = `http://127.0.0.1:3000/mockedjson/`+id+`.json`
     
     useEffect(() => {
         setIsPending(true)

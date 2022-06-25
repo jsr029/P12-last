@@ -51,14 +51,28 @@ const SwitchBetweenApiAndMock = () => {
         setMockedApi(true);
         setData3({ mockedData })
     };
-    return (
-        <div className='sportSee-switcher-button'>
-            <button onClick={apiHandler}>
+     return (
+        <React.Fragment>
+        <div className={"sportSee-switcher-button " + (hideBySass ? "visible" : "hidden")}>
+        <h1>P12 openClassRooms</h1>
+        <p>Read and Act (React) before clicking a button</p>
+            <button onClick={()=>
+            {
+                apiHandler();
+                handleHide();
+            }
+                }>
                 <span>The Server Backend is turned On</span>
                 </button>
-            <button onClick={mockedapiHandler}>
+            <button onClick={()=>
+            {
+                mockedapiHandler();
+                handleHide()
+            }
+                }>
                 <span>The Server Backend is turned Off</span>
             </button>
+        </div>
             {api && (
                 <>
                         <GetUserMainData {...data2} />
@@ -69,7 +83,7 @@ const SwitchBetweenApiAndMock = () => {
                         <GetUserMainData {...data3} />
                 </>
             )}
-        </div>
+        </React.Fragment>
     );
 };
 

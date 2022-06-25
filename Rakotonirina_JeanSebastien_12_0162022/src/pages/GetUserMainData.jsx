@@ -13,7 +13,6 @@ import PropTypes from 'prop-types';
  * @returns { Component } HorizontalMenu, VerticalMenu, UserMainData 
  */
 function GetUserMainData(props) {
-	console.log(props)
 		/**
 	 * Retrieves the id by useParms hook function
 	 */
