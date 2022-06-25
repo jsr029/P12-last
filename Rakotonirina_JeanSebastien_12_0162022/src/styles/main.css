@@ -358,4 +358,21 @@ canvas {
   color: white;
 }
 
+.sportSee-switcher-button {
+  width: 100%;
+  text-align: center;
+}
+.sportSee-switcher-button button {
+  width: 15%;
+  background: red;
+  color: white;
+  padding: 10px;
+  margin: 0 15px;
+  border-radius: 5px;
+}
+.sportSee-switcher-button button:hover {
+  background: #ff3333;
+  color: #e6e6e6;
+}
+
 /*# sourceMappingURL=main.css.map */

@@ -1,0 +1,16 @@
+.sportSee-switcher-button{
+    width: 100%;
+        text-align: center;
+    button{
+        width: 15%;
+        background: red;
+        color: white;
+        padding: 10px;
+        margin: 0 15px;
+        border-radius: 5px;
+        &:hover{
+            background: lighten(red, 10%);
+            color: darken(white, 10%);
+        }
+    }
+}

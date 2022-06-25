@@ -1,11 +1,8 @@
 import React from 'react'
 import UserMainData from '../components/UserMainData'
-import { useParams } from 'react-router-dom'
 import HorizontalMenu from '../components/HorizontalMenu'
 import VerticalMenu from '../components/VerticalMenu'
-import Handle4Urls from '../components/utils/Handle4Urls'
-import HandleMockedData from '../components/utils/HandleMockedData'
-
+import PropTypes from 'prop-types';
 /**
  * 
  * Retrieves the id with useParams hook and pass it in the url with useFetch hook
@@ -15,11 +12,11 @@ import HandleMockedData from '../components/utils/HandleMockedData'
  * Gets the user datas infos
  * @returns { Component } HorizontalMenu, VerticalMenu, UserMainData 
  */
-function GetUserMainData() {
+function GetUserMainData(props) {
+	console.log(props)
 		/**
 	 * Retrieves the id by useParms hook function
 	 */
-	const id = useParams().id
 	/**
 	 * Puts conditions :
 	 * - if id!=12 and id!=18 returns error 404 page inside <NotFound /> component
@@ -31,9 +28,6 @@ function GetUserMainData() {
 		 * corresponding at first endPoints url in the switch
 		 */
 
-	const { data, isLoading } = Handle4Urls(id)
-	const { mockedData, isPending } = HandleMockedData(12) 
-	console.log(data.datas)
 	/**
 	 * @returns { String } 'Il y a un probleme' if error 
 	 */
@@ -44,15 +38,29 @@ function GetUserMainData() {
 	 * 
 	 * else returns <HorizontalMenu/>, <VerticalMenu /> and <UserMainData /> components
 	 */
-	return isLoading ? <div>Chargement...</div> :(
-		<React.Fragment>
-		<HorizontalMenu />
-		<div className='menu-graph-bloc'>
-			<VerticalMenu />
-			<UserMainData datas={data.datas} />
-		</div>
-		</React.Fragment>
-	)
+	if(!props.mockedData){
+		return (
+			<React.Fragment>
+			<HorizontalMenu />
+			<div className='menu-graph-bloc'>
+				<VerticalMenu />
+				<UserMainData datas={props.data} />
+			</div>
+			</React.Fragment>
+		)
+	}
+	if(props.mockedData){
+		return (
+			<React.Fragment>
+			<HorizontalMenu />
+			<div className='menu-graph-bloc'>
+				<VerticalMenu />
+				<UserMainData datas={props.mockedData} />
+			</div>
+			</React.Fragment>
+		)
+	}
+
 	
 };
 

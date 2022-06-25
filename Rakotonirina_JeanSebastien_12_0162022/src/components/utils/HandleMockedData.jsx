@@ -16,7 +16,6 @@ function HandleMockedData(id) {
               headers: { 'Content-Type': 'application/json' }
             })
             const data = await response.json()
-            console.log(data)
             setMockedData(data)
           } catch (err) {
             console.log(err)
@@ -27,7 +26,6 @@ function HandleMockedData(id) {
         }
         fetchData()
       }, [url])
-      console.log(mockedData)
             return { mockedData, isPending, error }
 }
 

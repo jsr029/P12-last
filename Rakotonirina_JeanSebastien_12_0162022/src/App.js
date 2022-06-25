@@ -2,7 +2,7 @@ import React from 'react'
 import { BrowserRouter, Route, Switch } from "react-router-dom";
 import './styles/main.css';
 import ChooseUserId from './pages/ChooseUserId'
-import GetUserMainData from './pages/GetUserMainData'
+import SwitchBetweenApiAndMock from './pages/SwitchBetweenApiAndMock'
 /** 
  *  Injects DOM in HTML root div
  * 
@@ -20,10 +20,7 @@ function App() {
                   <ChooseUserId />
             </Route>              
             <Route path='/:id'>
-                  <GetUserMainData />
-            </Route>
-            <Route path='/mockedJson/data.json'>
-                  <GetUserMainData />
+                  <SwitchBetweenApiAndMock />
             </Route>
         </Switch>
     </BrowserRouter>

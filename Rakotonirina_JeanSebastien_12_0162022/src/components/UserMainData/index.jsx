@@ -45,12 +45,12 @@ import RPieChart from '../RPieChart'
 
 function UserMainData(props) {
      /**Datas from http://localhost:3000/user/${userId} endpoint */
-    const USERMAINNAME = props.datas[0].userInfos.firstName
-    const USERMAINCAL = props.datas[0].keyData.calorieCount
-    const USERMAINPRO = props.datas[0].keyData.proteinCount
-    const USERMAINCAR = props.datas[0].keyData.carbohydrateCount
-    const USERMAINLIP = props.datas[0].keyData.lipidCount
-    /** end Datas */
+    const USERMAINNAME = props.datas.datas[0].userInfos.firstName
+    const USERMAINCAL = props.datas.datas[0].keyData.calorieCount
+    const USERMAINPRO = props.datas.datas[0].keyData.proteinCount
+    const USERMAINCAR = props.datas.datas[0].keyData.carbohydrateCount
+    const USERMAINLIP = props.datas.datas[0].keyData.lipidCount
+    /** end Datas.data.datas */
 
     return (
         <>
@@ -59,12 +59,12 @@ function UserMainData(props) {
                 <p>Félicitation ! Vous avez explosé vos objectifs hier <span role='img' aria-label='emoji'>👏</span></p>
                 <div className='spotSee-main-bloc'>
                     <div className='sportSee-main-graph'>
-                        <GetUserActivityData id={props.datas[0].id} data={props.datas[1]} />
+                        <GetUserActivityData id={props.datas.datas[0].id} data={props.datas.datas[1]} />
                         <div className='sportSee-main-grapBloc'>
-                            <GetUserSessionsData id={props.datas[0].id}  data={props.datas[3]} />
-                            <GetUserPerformance  id={props.datas[0].id}  data={props.datas[2]} />
+                            <GetUserSessionsData id={props.datas.datas[0].id}  data={props.datas.datas[3]} />
+                            <GetUserPerformance  id={props.datas.datas[0].id}  data={props.datas.datas[2]} />
                             <div className='sportSee-score'>
-                                <RPieChart scoreUser={props.datas[0]} />
+                                <RPieChart scoreUser={props.datas.datas[0]} />
                             </div>
                         </div>
                     </div>
