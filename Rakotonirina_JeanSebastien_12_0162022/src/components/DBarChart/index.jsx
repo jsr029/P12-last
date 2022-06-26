@@ -9,6 +9,7 @@ import {
   Legend,
   ResponsiveContainer
 } from "recharts";
+import PropTypes from "prop-types";
 
 
 /**
@@ -27,17 +28,22 @@ import {
 }
  * @returns { Html } displays Bar Chart graph
  */
-function DBarChart(props) {
+function DBarChart({ sessions }) {
    let data = []
-  for(let i=0; i < props.sessions.length; i++){
+   let dates = []
+   let kgs = []
+   let cals = []
+  for(let i=0; i < sessions.length; i++){
+    dates.push(sessions[i].day)
+    kgs.push(sessions[i].kilogram)
+    cals.push(sessions[i].calories)
       data.push({
-        name: props.sessions[i].day,
-        kg: props.sessions[i].kilogram,
-        cal: props.sessions[i].calories
+        name: sessions[i].day,
+        kg: sessions[i].kilogram,
+        cal: sessions[i].calories
       })
   }
-
-  return (
+   return (
     <>
       <h2>Activité quotidienne</h2>
       <ResponsiveContainer width="100%" height={320}>
@@ -66,5 +72,42 @@ function DBarChart(props) {
     </ResponsiveContainer>
     </>
   );
+}
+DBarChart.propTypes = {
+  /**
+   * data is an object
+   */
+  data: PropTypes.object,
+    /**
+   * sessions is an array of day (date string type)
+   * kilogram and calories (number type) is required
+   */
+  sessions : PropTypes.arrayOf(PropTypes.shape({
+    /** day is string (date) is required*/
+    day: PropTypes.string.isRequired,
+    /**kilogram is number is required */
+    kilogram: PropTypes.number.isRequired,
+    /**calorioes is number is required */
+    calories: PropTypes.number.isRequired,
+  })).isRequired,
+
+/**
+   * dates is an array of dates
+   */
+  dates: PropTypes.arrayOf(
+    PropTypes.instanceOf(Date).isRequired
+  ),
+  /**
+   * kgs is an array of numbers
+   */
+  kgs: PropTypes.arrayOf(
+    PropTypes.instanceOf(Number).isRequired
+  ),  
+  /**
+   * cals is an array of numbers
+   */
+  cals: PropTypes.arrayOf(
+    PropTypes.instanceOf(Number).isRequired
+  )
 }
 export default DBarChart;

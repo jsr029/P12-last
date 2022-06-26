@@ -3,7 +3,7 @@ import { useEffect, useState } from "react";
 function Handle4Urls(id) {
     const [data, setData] = useState({})
     const [isLoading, setIsLoading] = useState(true)
-    const [error, setError] = useState(null)
+    const [error, setError] = useState(false)
     const urls = [
         `http://localhost:5000/user/${id}`,
         `http://localhost:5000/user/${id}/activity`,

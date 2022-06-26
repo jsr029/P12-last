@@ -32,11 +32,11 @@ const SwitchBetweenApiAndMock = () => {
     /**
      * Retrieves mocked api data from HandleMockedData function 
      */
-    const {  mockedData } = HandleMockedData(id)
+    const {  mockedData, isPending, error2 } = HandleMockedData(id)
      const mockedapiHandler = () => {
         setApi(false);
         setMockedApi(true);
-        setData3({ mockedData })
+        setData3({ mockedData, isPending, error2 })
     };
    /**
      * Retrieves api data from Handle4Urls function by id
