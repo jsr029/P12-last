@@ -1,9 +1,6 @@
 # P12-last
 Openclassrooms project 12 : Developp an analytics dashboard with react
 
-# jsDocs
-[Here](https://jsr029.github.io/P12-last/Rakotonirina_JeanSebastien_12_0162022/docs/)
-
 # What is the project 12 ?
 Create a Dashboard app with React
 
@@ -39,4 +36,7 @@ I encountered a lot of issues :
 # For this dashboard app, I needed to add some dependencies
 let's have a look at my frontend package.json
 <div><img src="https://github.com/jsr029/P12-last/blob/master/packageJson.PNG" alt="package.json" /></div>
+
+# jsDocs
+[Here](https://jsr029.github.io/P12-last/Rakotonirina_JeanSebastien_12_0162022/docs/)
 
