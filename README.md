@@ -23,11 +23,11 @@ React is always a big adventure, cause you need to be careful about the dependen
 It's like your trip bag, don't forget your toothpaste !
 
 I encountered a lot of issues :
-
 1. vscode crashed after cancelling all changes cause needed action
+<div style={text-align: center}><img src="https://github.com/jsr029/P12-last/blob/master/vscode%20error.PNG" alt="vscode crashing image" /></div> 
 2. babel issues
-<div><img src="https://github.com/jsr029/P12-last/blob/master/babelIssue.PNG" alt="babel issues" /></div>
-4. jshint issues
-5. npm start issues
-6. etc...
+<div style={text-align:center}><img src="https://github.com/jsr029/P12-last/blob/master/babelIssue.PNG" alt="babel issues" /></div>
+3. jshint issues
+4. npm start issues
+5. etc...
 
