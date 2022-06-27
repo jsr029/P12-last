@@ -8,11 +8,12 @@ Create a Dashboard app with React
 - Backend
 
 1. git clone the backend, using its repository https://github.com/OpenClassrooms-Student-Center/P9-front-end-dashboard.git more details on its github page
-2. npm install it
+2. npm install
 
 - Frontend
-1- npx create-react-app my-app
-2- npm install it
+1. clone the repository
+2. npm install
+3. npm start or yarn start
 
 # Ocean's 12
 React is always a big adventure, cause you need to be careful about the dependencies. 
