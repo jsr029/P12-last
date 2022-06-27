@@ -1,11 +1,10 @@
 import React from 'react'
 import RRadarChart from '../RRadarChart'
-
+import PropTypes from 'prop-types'
 
 /**
  * Retrieves user performance data and transmits props to RRadarChart component
- * @param { Object } perfData userId, kind{1:cardio, 2:energy, etc..}, data[value, kind]
- * @param { Object } performance parent Object
+ * @param { Object } props props perfdata, props performance 
  * @returns { Component } RRadarChart 
  */
 function UserPerformanceData(props) {
@@ -19,5 +18,14 @@ function UserPerformanceData(props) {
         </>
     )
 };
-
+UserPerformanceData.propTypes = {
+    /**
+     * perfdata is an array of [value, kind]
+     */
+    perfData: PropTypes.array.isRequired,
+    /**
+     * performance is an Object of {userId, kind{}, data[]}
+     */
+    performance: PropTypes.object.isRequired
+}
 export default UserPerformanceData
