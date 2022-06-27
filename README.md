@@ -31,3 +31,11 @@ I encountered a lot of issues :
 4. npm start issues <div><img src="https://github.com/jsr029/P12-last/blob/master/npmStartIssue.PNG" alt="npm start issues" /></div>
 5. etc...
 
+# How to get rid of those issues ?
+- yarn install and even if npm start doesn't work, try yarn start
+- npm i react-dom react
+- npm i --save-dev @types/react-dom @types/react
+
+# For this dashboard app, I needed to add some dependencies
+let's have a look at my package.json
+
