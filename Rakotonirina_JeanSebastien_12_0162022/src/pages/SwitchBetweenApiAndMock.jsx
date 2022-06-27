@@ -24,7 +24,7 @@ const SwitchBetweenApiAndMock = () => {
     /**
      * Switches to api data
      */
-    const [data2, setData2] = useState({})
+    let [data2, setData2] = useState({})
     /**
      * Switches to mocked api data
      */
@@ -67,7 +67,7 @@ const SwitchBetweenApiAndMock = () => {
                 </button>
             <button onClick={()=>
             {
-                mockedapiHandler();
+                mockedapiHandler()
                 handleHide()
             }
                 }>
