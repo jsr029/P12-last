@@ -29,6 +29,8 @@ I encountered a lot of issues :
 5. etc...
 
 # How to get rid of those issues ?
+- reinstall vscode
+- delete node_modules directory and type yarn install if nmp i doesn't work
 - yarn add instead of npm install
 - and even if npm start doesn't work, try yarn start
 - npm i react-dom react
@@ -41,4 +43,4 @@ let's have a look at my frontend package.json
 # jsDocs
 [Here](https://jsr029.github.io/P12-last/Rakotonirina_JeanSebastien_12_0162022/docs/)
 
-# Enjoy it
+# Algorigram
