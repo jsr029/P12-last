@@ -26,7 +26,8 @@ I encountered a lot of issues :
 
 1. vscode crashed after cancelling all changes cause needed action
 2. babel issues
-3. jshint issues
-4. npm start issues
-5. etc...
+<div><img src="https://github.com/jsr029/P12-last/blob/master/babelIssue.PNG" alt="babel issues" /></div>
+4. jshint issues
+5. npm start issues
+6. etc...
 
