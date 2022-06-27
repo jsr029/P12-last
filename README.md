@@ -28,6 +28,7 @@ I encountered a lot of issues :
 2. babel issues
 <div style={text-align:center}><img src="https://github.com/jsr029/P12-last/blob/master/babelIssue.PNG" alt="babel issues" /></div>
 3. jshint issues
-4. npm start issues
-5. etc...
+4. 
+5. npm start issues
+6. etc...
 
