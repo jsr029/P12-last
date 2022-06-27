@@ -1,4 +1,5 @@
 import React from 'react'
+import PropTypes from 'prop-types'
 
 /**
  * Displays right bloc html datas
@@ -67,5 +68,18 @@ function RightBloc ({ calories, protein, glucid, lipid }) {
         </div>
     );
 };
-
+RightBloc.propTypes = {
+    /**
+     * All required for displaying the datas right bloc
+     * 
+     * calories is number 
+     */
+    calories: PropTypes.number.isRequired, 
+    /**protein is number */
+    protein: PropTypes.number.isRequired, 
+    /**glucid is number */
+    glucid: PropTypes.number.isRequired, 
+    /**lipid is number */
+    lipid: PropTypes.number.isRequired
+}
 export default RightBloc;

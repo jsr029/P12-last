@@ -1,9 +1,9 @@
 import React from 'react'
 import { PieChart, Pie, ResponsiveContainer, Cell} from 'recharts'
-
+import PropTypes from 'prop-types'
 /**
  * Retrieves user datas for displaying Pie Chart
- * @param { Object } scoreUser {id:, userInfos{firstName}, score, keyData{caloriesCount, etc..}}
+ * @param { Object } scoreUser {id:, userInfos{firstName}, score, keyData{caloriesCount, etc..}}*
  * @returns { Component } PieChart component from Recharts library
  */
 const RPieChart = ({ scoreUser }) => { 
@@ -40,5 +40,8 @@ const RPieChart = ({ scoreUser }) => {
                 </>
         )
 }
-
+RPieChart.propTypes = {
+        /**score user is an object of id, userInfos:{}, score, keyData:{calorieCount, proteinCount, lipidCount, carbohydrateCount} */
+        scoreUser: PropTypes.object.isRequired,
+}
 export default RPieChart;

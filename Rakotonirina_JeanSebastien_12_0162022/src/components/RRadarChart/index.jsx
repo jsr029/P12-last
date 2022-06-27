@@ -1,15 +1,15 @@
 import React from 'react'
 import { Radar, RadarChart, PolarGrid, 
         PolarAngleAxis, Legend, ResponsiveContainer } from 'recharts';
+import PropTypes from 'prop-types'
 
 /**
  * Displays Radar graph using recharts library
- * @param { Object } kind {1:cardio, 2:energy, etc..}
  * @param { Object } perfData [{value:110, kind:6}, {etc..}]
  * @returns { Component } RadarChart from recharts library
  */
 function RRadarChart({ perfData }) {   
-          // Sample data
+           // Sample data
     let data = []
     const frenchKind = {
         6:'Intensité',
@@ -41,5 +41,15 @@ function RRadarChart({ perfData }) {
             </ResponsiveContainer>
         )
     }
-
+RRadarChart.propTypes = {
+    /**
+     * perfData is an Array of [value, kind] all required
+     */
+    perfData : PropTypes.arrayOf(PropTypes.shape({
+        /** value is number */
+        value: PropTypes.number.isRequired,
+        /**kind is number */
+        kind: PropTypes.number.isRequired
+    })).isRequired
+}
 export default RRadarChart;

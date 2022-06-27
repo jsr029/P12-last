@@ -58,8 +58,8 @@ function UserMainData({ datas }) {
 };
 UserMainData.propTypes = {
     /**
-     * datas is array of {id, userInfos{}, score, keyData}, {userId, sessions[]}, {userId, kind{}, data[]}, {userId, sessions[]}
+     * datas is object of {id, userInfos{}, score, keyData}, {userId, sessions[]}, {userId, kind{}, data[]}, {userId, sessions[]} required
      */
-    datas : PropTypes.object.isRequired
-}
+    datas : PropTypes.object.isRequired,
+    }
 export default UserMainData
