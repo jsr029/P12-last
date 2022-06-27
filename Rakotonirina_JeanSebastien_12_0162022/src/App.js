@@ -3,6 +3,7 @@ import { BrowserRouter, Route, Switch } from "react-router-dom";
 import './styles/main.css';
 import ChooseUserId from './pages/ChooseUserId'
 import SwitchBetweenApiAndMock from './pages/SwitchBetweenApiAndMock'
+import NotFound from './components/NotFound'
 /** 
  *  Injects DOM in HTML root div
  * 
@@ -21,6 +22,9 @@ function App() {
             </Route>              
             <Route path='/:id'>
                   <SwitchBetweenApiAndMock />
+            </Route>
+            <Route>
+                  <NotFound />
             </Route>
         </Switch>
     </BrowserRouter>

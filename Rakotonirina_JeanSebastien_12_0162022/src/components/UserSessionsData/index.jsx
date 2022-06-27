@@ -1,9 +1,9 @@
 import React from 'react'
 import RLineChart from '../RLineChart'
-
+import PropTypes from 'prop-types'
 /**
  * Transmits props data as sessions to RlineChart component for displaying Line Chart
- * @param { Object } data userId, sessions[{day, sessionLength}]
+ * @param { Object } props.data an Object of {userId, sessions}
  * @return { Component } RLineChart
  */
 function UserSessionsData(props) {
@@ -15,5 +15,10 @@ function UserSessionsData(props) {
          </>
     )
 };
-
+UserSessionsData.propTypes = {
+    /**
+     * data is an object of {userId, sessions{}}
+     */
+    data : PropTypes.object.isRequired
+}
 export default UserSessionsData

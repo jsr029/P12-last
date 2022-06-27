@@ -7,19 +7,20 @@ import {
     XAxis,
     YAxis
 } from 'recharts';
+import PropTypes from 'prop-types'
   
 /**
  * Displays Line Chart graph
  * @param { Object } sessions props sessions bringing data we need to build Line Chart graph 
  * @returns { Component } LineChart from recharts library
  */
-function RLineChart(props) {
+function RLineChart({ sessions }) {
     let pdata = []
     const days = ['L', 'M', 'M', 'J', 'V', 'S', 'D']
-    for(let i=0; i < props.sessions.length; i++){
+    for(let i=0; i < sessions.length; i++){
         pdata.push({
             name: days[i],
-            min: props.sessions[i].sessionLength
+            min: sessions[i].sessionLength
         })
     }
     return (
@@ -49,5 +50,17 @@ function RLineChart(props) {
             </ResponsiveContainer>
         </>
     );
+}
+RLineChart.propTypes = {
+    /**
+     * sessions is an array of [day, sessionLength]
+     * its datas are used to display the Line Chart Graph
+     */
+    sessions: PropTypes.arrayOf(PropTypes.shape({
+        /**day is number */
+        day: PropTypes.number.isRequired,
+        /** sessionLength is number */
+        sessionLength: PropTypes.number.isRequired
+    })).isRequired,
 }
 export default RLineChart

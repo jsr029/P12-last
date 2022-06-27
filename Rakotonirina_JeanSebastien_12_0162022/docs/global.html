@@ -336,146 +336,6 @@ etc..
 
         <tr>
             
-                <td class="name"><code>sessions</code></td>
-            
-
-            <td class="type">
-            
-                
-            
-            </td>
-
-            
-                <td class="attributes">
-                
-                    &lt;optional><br>
-                
-
-                
-                </td>
-            
-
-            
-
-            <td class="description last">sessions is an array of day (date string type)
-kilogram and calories (number type) is required
-                <h6>Properties</h6>
-
-<table class="props">
-    <thead>
-    <tr>
-        
-        <th>Name</th>
-        
-
-        <th>Type</th>
-
-        
-        <th>Attributes</th>
-        
-
-        
-
-        <th class="last">Description</th>
-    </tr>
-    </thead>
-
-    <tbody>
-    
-
-        <tr>
-            
-                <td class="name"><code>day</code></td>
-            
-
-            <td class="type">
-            
-                
-            
-            </td>
-
-            
-                <td class="attributes">
-                
-                    &lt;optional><br>
-                
-
-                
-                </td>
-            
-
-            
-
-            <td class="description last">day is string (date) is required</td>
-        </tr>
-
-    
-
-        <tr>
-            
-                <td class="name"><code>kilogram</code></td>
-            
-
-            <td class="type">
-            
-                
-            
-            </td>
-
-            
-                <td class="attributes">
-                
-                    &lt;optional><br>
-                
-
-                
-                </td>
-            
-
-            
-
-            <td class="description last">kilogram is number is required</td>
-        </tr>
-
-    
-
-        <tr>
-            
-                <td class="name"><code>calories</code></td>
-            
-
-            <td class="type">
-            
-                
-            
-            </td>
-
-            
-                <td class="attributes">
-                
-                    &lt;optional><br>
-                
-
-                
-                </td>
-            
-
-            
-
-            <td class="description last">calorioes is number is required</td>
-        </tr>
-
-    
-    </tbody>
-</table>
-
-            </td>
-        </tr>
-
-    
-
-        <tr>
-            
                 <td class="name"><code>dates</code></td>
             
 
@@ -553,90 +413,7 @@ kilogram and calories (number type) is required
 
             
 
-            <td class="description last">cals is an array of numbers
-                <h6>Properties</h6>
-
-<table class="props">
-    <thead>
-    <tr>
-        
-        <th>Name</th>
-        
-
-        <th>Type</th>
-
-        
-        <th>Attributes</th>
-        
-
-        
-
-        <th class="last">Description</th>
-    </tr>
-    </thead>
-
-    <tbody>
-    
-
-        <tr>
-            
-                <td class="name"><code>data</code></td>
-            
-
-            <td class="type">
-            
-                
-            
-            </td>
-
-            
-                <td class="attributes">
-                
-                    &lt;optional><br>
-                
-
-                
-                </td>
-            
-
-            
-
-            <td class="description last">returns a promise as response</td>
-        </tr>
-
-    
-
-        <tr>
-            
-                <td class="name"><code>kind</code></td>
-            
-
-            <td class="type">
-            
-                
-            
-            </td>
-
-            
-                <td class="attributes">
-                
-                    &lt;optional><br>
-                
-
-                
-                </td>
-            
-
-            
-
-            <td class="description last">kind is nulber</td>
-        </tr>
-
-    
-    </tbody>
-</table>
-
-            </td>
+            <td class="description last">cals is an array of numbers</td>
         </tr>
 
     
@@ -733,7 +510,7 @@ kilogram and calories (number type) is required
     
 
     
-    <h4 class="name" id="GetUserActivityData"><span class="type-signature"></span>GetUserActivityData<span class="signature">()</span><span class="type-signature"> &rarr; {Component}</span></h4>
+    <h4 class="name" id="GetUserActivityData"><span class="type-signature"></span>GetUserActivityData<span class="signature">(data)</span><span class="type-signature"> &rarr; {Component}</span></h4>
     
 
     
@@ -777,13 +554,13 @@ kilogram and calories (number type) is required
 
         <tr>
             
-                <td class="name"><code>props.id</code></td>
+                <td class="name"><code>data</code></td>
             
 
             <td class="type">
             
                 
-<span class="param-type">number</span>
+<span class="param-type">Object</span>
 
 
             
@@ -793,7 +570,7 @@ kilogram and calories (number type) is required
 
             
 
-            <td class="description last"><p>props user id</p></td>
+            <td class="description last"></td>
         </tr>
 
     
@@ -801,6 +578,68 @@ kilogram and calories (number type) is required
 </table>
 
 
+
+
+
+
+    <h5 class="subsection-title">Properties:</h5>
+
+    
+
+<table class="props">
+    <thead>
+    <tr>
+        
+        <th>Name</th>
+        
+
+        <th>Type</th>
+
+        
+        <th>Attributes</th>
+        
+
+        
+
+        <th class="last">Description</th>
+    </tr>
+    </thead>
+
+    <tbody>
+    
+
+        <tr>
+            
+                <td class="name"><code>data</code></td>
+            
+
+            <td class="type">
+            
+                
+<span class="param-type">userId, sessions[{day</span>
+
+
+            
+            </td>
+
+            
+                <td class="attributes">
+                
+                    &lt;optional><br>
+                
+
+                
+                </td>
+            
+
+            
+
+            <td class="description last">data is an object of,{kilogram},{calories}]}</td>
+        </tr>
+
+    
+    </tbody>
+</table>
 
 
 
@@ -993,7 +832,7 @@ kilogram and calories (number type) is required
     
     <dt class="tag-source">Source:</dt>
     <dd class="tag-source"><ul class="dummy"><li>
-        <a href="pages_GetUserMainData.jsx.html">pages/GetUserMainData.jsx</a>, <a href="pages_GetUserMainData.jsx.html#line13">line 13</a>
+        <a href="pages_GetUserMainData.jsx.html">pages/GetUserMainData.jsx</a>, <a href="pages_GetUserMainData.jsx.html#line12">line 12</a>
     </li></ul></dd>
     
 
@@ -1212,7 +1051,7 @@ and data as performance</p>
     
 
     
-    <h4 class="name" id="GetUserSessionsData"><span class="type-signature"></span>GetUserSessionsData<span class="signature">(id)</span><span class="type-signature"> &rarr; {component}</span></h4>
+    <h4 class="name" id="GetUserSessionsData"><span class="type-signature"></span>GetUserSessionsData<span class="signature">()</span><span class="type-signature"> &rarr; {component}</span></h4>
     
 
     
@@ -1257,13 +1096,13 @@ Uses UserSessionsData component in which props data was passed</p>
 
         <tr>
             
-                <td class="name"><code>id</code></td>
+                <td class="name"><code>props.data</code></td>
             
 
             <td class="type">
             
                 
-<span class="param-type">Number</span>
+<span class="param-type">Object</span>
 
 
             
@@ -1273,8 +1112,8 @@ Uses UserSessionsData component in which props data was passed</p>
 
             
 
-            <td class="description last"><p>props user id, it is used as parameter in HandleChange function to retrieve data<br>
-by the endPoints url case 2 in the switch function</p></td>
+            <td class="description last"><p>props data and userId, it is used as parameter to retrieve data<br>
+by an endPoints url</p></td>
         </tr>
 
     
@@ -1282,6 +1121,68 @@ by the endPoints url case 2 in the switch function</p></td>
 </table>
 
 
+
+
+
+
+    <h5 class="subsection-title">Properties:</h5>
+
+    
+
+<table class="props">
+    <thead>
+    <tr>
+        
+        <th>Name</th>
+        
+
+        <th>Type</th>
+
+        
+        <th>Attributes</th>
+        
+
+        
+
+        <th class="last">Description</th>
+    </tr>
+    </thead>
+
+    <tbody>
+    
+
+        <tr>
+            
+                <td class="name"><code>data</code></td>
+            
+
+            <td class="type">
+            
+                
+<span class="param-type">userId, data{</span>
+
+
+            
+            </td>
+
+            
+                <td class="attributes">
+                
+                    &lt;optional><br>
+                
+
+                
+                </td>
+            
+
+            
+
+            <td class="description last">props is an object of}</td>
+        </tr>
+
+    
+    </tbody>
+</table>
 
 
 
@@ -1315,7 +1216,7 @@ by the endPoints url case 2 in the switch function</p></td>
     
     <dt class="tag-source">Source:</dt>
     <dd class="tag-source"><ul class="dummy"><li>
-        <a href="pages_GetUserSessionsData.jsx.html">pages/GetUserSessionsData.jsx</a>, <a href="pages_GetUserSessionsData.jsx.html#line13">line 13</a>
+        <a href="pages_GetUserSessionsData.jsx.html">pages/GetUserSessionsData.jsx</a>, <a href="pages_GetUserSessionsData.jsx.html#line12">line 12</a>
     </li></ul></dd>
     
 
@@ -2056,6 +1957,149 @@ by the endPoints url case 2 in the switch function</p></td>
 
 
 
+    <h5 class="subsection-title">Properties:</h5>
+
+    
+
+<table class="props">
+    <thead>
+    <tr>
+        
+        <th>Name</th>
+        
+
+        <th>Type</th>
+
+        
+        <th>Attributes</th>
+        
+
+        
+
+        <th class="last">Description</th>
+    </tr>
+    </thead>
+
+    <tbody>
+    
+
+        <tr>
+            
+                <td class="name"><code>sessions</code></td>
+            
+
+            <td class="type">
+            
+                
+            
+            </td>
+
+            
+                <td class="attributes">
+                
+                    &lt;optional><br>
+                
+
+                
+                </td>
+            
+
+            
+
+            <td class="description last">sessions is an array of [day, sessionLength]
+its datas are used to display the Line Chart Graph
+                <h6>Properties</h6>
+
+<table class="props">
+    <thead>
+    <tr>
+        
+        <th>Name</th>
+        
+
+        <th>Type</th>
+
+        
+        <th>Attributes</th>
+        
+
+        
+
+        <th class="last">Description</th>
+    </tr>
+    </thead>
+
+    <tbody>
+    
+
+        <tr>
+            
+                <td class="name"><code>day</code></td>
+            
+
+            <td class="type">
+            
+                
+            
+            </td>
+
+            
+                <td class="attributes">
+                
+                    &lt;optional><br>
+                
+
+                
+                </td>
+            
+
+            
+
+            <td class="description last">day is number</td>
+        </tr>
+
+    
+
+        <tr>
+            
+                <td class="name"><code>sessionLength</code></td>
+            
+
+            <td class="type">
+            
+                
+            
+            </td>
+
+            
+                <td class="attributes">
+                
+                    &lt;optional><br>
+                
+
+                
+                </td>
+            
+
+            
+
+            <td class="description last">sessionLength is number</td>
+        </tr>
+
+    
+    </tbody>
+</table>
+
+            </td>
+        </tr>
+
+    
+    </tbody>
+</table>
+
+
+
+
 <dl class="details">
 
     
@@ -2085,7 +2129,7 @@ by the endPoints url case 2 in the switch function</p></td>
     
     <dt class="tag-source">Source:</dt>
     <dd class="tag-source"><ul class="dummy"><li>
-        <a href="components_RLineChart_index.jsx.html">components/RLineChart/index.jsx</a>, <a href="components_RLineChart_index.jsx.html#line16">line 16</a>
+        <a href="components_RLineChart_index.jsx.html">components/RLineChart/index.jsx</a>, <a href="components_RLineChart_index.jsx.html#line17">line 17</a>
     </li></ul></dd>
     
 
@@ -2863,7 +2907,7 @@ etc...
             <td class="type">
             
                 
-<span class="param-type">Object</span>
+<span class="param-type">Array</span>
 
 
             
@@ -2873,18 +2917,7 @@ etc...
 
             
 
-            <td class="description last"><p>props user sessions
-{
-&quot;userId&quot;: 12,
-&quot;sessions&quot;: [
-{
-&quot;day&quot;: &quot;2020-07-01&quot;,
-&quot;kilogram&quot;: 80,
-&quot;calories&quot;: 240
-},
-etc...
-]
-}</p></td>
+            <td class="description last"><p>props user sessions</p></td>
         </tr>
 
     
@@ -2892,6 +2925,176 @@ etc...
 </table>
 
 
+
+
+
+
+    <h5 class="subsection-title">Properties:</h5>
+
+    
+
+<table class="props">
+    <thead>
+    <tr>
+        
+        <th>Name</th>
+        
+
+        <th>Type</th>
+
+        
+        <th>Attributes</th>
+        
+
+        
+
+        <th class="last">Description</th>
+    </tr>
+    </thead>
+
+    <tbody>
+    
+
+        <tr>
+            
+                <td class="name"><code>sessions</code></td>
+            
+
+            <td class="type">
+            
+                
+            
+            </td>
+
+            
+                <td class="attributes">
+                
+                    &lt;optional><br>
+                
+
+                
+                </td>
+            
+
+            
+
+            <td class="description last">sessions array of [day, kilogram, calories] all required
+                <h6>Properties</h6>
+
+<table class="props">
+    <thead>
+    <tr>
+        
+        <th>Name</th>
+        
+
+        <th>Type</th>
+
+        
+        <th>Attributes</th>
+        
+
+        
+
+        <th class="last">Description</th>
+    </tr>
+    </thead>
+
+    <tbody>
+    
+
+        <tr>
+            
+                <td class="name"><code>day</code></td>
+            
+
+            <td class="type">
+            
+                
+            
+            </td>
+
+            
+                <td class="attributes">
+                
+                    &lt;optional><br>
+                
+
+                
+                </td>
+            
+
+            
+
+            <td class="description last">day is date</td>
+        </tr>
+
+    
+
+        <tr>
+            
+                <td class="name"><code>kilogram</code></td>
+            
+
+            <td class="type">
+            
+                
+            
+            </td>
+
+            
+                <td class="attributes">
+                
+                    &lt;optional><br>
+                
+
+                
+                </td>
+            
+
+            
+
+            <td class="description last">kilogram is number</td>
+        </tr>
+
+    
+
+        <tr>
+            
+                <td class="name"><code>calories</code></td>
+            
+
+            <td class="type">
+            
+                
+            
+            </td>
+
+            
+                <td class="attributes">
+                
+                    &lt;optional><br>
+                
+
+                
+                </td>
+            
+
+            
+
+            <td class="description last">calories us number</td>
+        </tr>
+
+    
+    </tbody>
+</table>
+
+            </td>
+        </tr>
+
+    
+    </tbody>
+</table>
 
 
 
@@ -2925,7 +3128,7 @@ etc...
     
     <dt class="tag-source">Source:</dt>
     <dd class="tag-source"><ul class="dummy"><li>
-        <a href="components_UserActivityDataItem_index.jsx.html">components/UserActivityDataItem/index.jsx</a>, <a href="components_UserActivityDataItem_index.jsx.html#line21">line 21</a>
+        <a href="components_UserActivityDataItem_index.jsx.html">components/UserActivityDataItem/index.jsx</a>, <a href="components_UserActivityDataItem_index.jsx.html#line11">line 11</a>
     </li></ul></dd>
     
 
@@ -2983,7 +3186,7 @@ etc...
     
 
     
-    <h4 class="name" id="UserMainData"><span class="type-signature"></span>UserMainData<span class="signature">(props)</span><span class="type-signature"> &rarr; {Component}</span></h4>
+    <h4 class="name" id="UserMainData"><span class="type-signature"></span>UserMainData<span class="signature">(datas)</span><span class="type-signature"> &rarr; {Component}</span></h4>
     
 
     
@@ -3028,7 +3231,7 @@ etc...
 
         <tr>
             
-                <td class="name"><code>props</code></td>
+                <td class="name"><code>datas</code></td>
             
 
             <td class="type">
@@ -3055,6 +3258,68 @@ etc...
 </table>
 
 
+
+
+
+
+    <h5 class="subsection-title">Properties:</h5>
+
+    
+
+<table class="props">
+    <thead>
+    <tr>
+        
+        <th>Name</th>
+        
+
+        <th>Type</th>
+
+        
+        <th>Attributes</th>
+        
+
+        
+
+        <th class="last">Description</th>
+    </tr>
+    </thead>
+
+    <tbody>
+    
+
+        <tr>
+            
+                <td class="name"><code>datas</code></td>
+            
+
+            <td class="type">
+            
+                
+<span class="param-type">id, userInfos{</span>
+
+
+            
+            </td>
+
+            
+                <td class="attributes">
+                
+                    &lt;optional><br>
+                
+
+                
+                </td>
+            
+
+            
+
+            <td class="description last">datas is array of, score, keyData}, {userId, sessions[]}, {userId, kind{}, data[]}, {userId, sessions[]}</td>
+        </tr>
+
+    
+    </tbody>
+</table>
 
 
 
@@ -3721,7 +3986,7 @@ etc...
     
 
     
-    <h4 class="name" id="UserSessionsData"><span class="type-signature"></span>UserSessionsData<span class="signature">(data)</span><span class="type-signature"> &rarr; {Component}</span></h4>
+    <h4 class="name" id="UserSessionsData"><span class="type-signature"></span>UserSessionsData<span class="signature">()</span><span class="type-signature"> &rarr; {Component}</span></h4>
     
 
     
@@ -3765,7 +4030,7 @@ etc...
 
         <tr>
             
-                <td class="name"><code>data</code></td>
+                <td class="name"><code>props.data</code></td>
             
 
             <td class="type">
@@ -3781,7 +4046,7 @@ etc...
 
             
 
-            <td class="description last"><p>userId, sessions[{day, sessionLength}]</p></td>
+            <td class="description last"><p>an Object of {userId, sessions}</p></td>
         </tr>
 
     
@@ -3789,6 +4054,68 @@ etc...
 </table>
 
 
+
+
+
+
+    <h5 class="subsection-title">Properties:</h5>
+
+    
+
+<table class="props">
+    <thead>
+    <tr>
+        
+        <th>Name</th>
+        
+
+        <th>Type</th>
+
+        
+        <th>Attributes</th>
+        
+
+        
+
+        <th class="last">Description</th>
+    </tr>
+    </thead>
+
+    <tbody>
+    
+
+        <tr>
+            
+                <td class="name"><code>data</code></td>
+            
+
+            <td class="type">
+            
+                
+<span class="param-type">userId, sessions{</span>
+
+
+            
+            </td>
+
+            
+                <td class="attributes">
+                
+                    &lt;optional><br>
+                
+
+                
+                </td>
+            
+
+            
+
+            <td class="description last">data is an object of}</td>
+        </tr>
+
+    
+    </tbody>
+</table>
 
 
 
@@ -4189,7 +4516,7 @@ etc...
 <br class="clear">
 
 <footer>
-    Documentation generated by <a href="https://github.com/jsdoc/jsdoc">JSDoc 3.6.10</a> on Sun Jun 26 2022 20:52:08 GMT+0200 (heure d’été d’Europe centrale)
+    Documentation generated by <a href="https://github.com/jsdoc/jsdoc">JSDoc 3.6.10</a> on Mon Jun 27 2022 08:04:42 GMT+0200 (heure d’été d’Europe centrale)
 </footer>
 
 <script> prettyPrint(); </script>

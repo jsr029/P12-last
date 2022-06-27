@@ -1,6 +1,6 @@
 import React from 'react'
 import UserActivityDataItem from '../UserActivityDataItem'
-
+import PropTypes from 'prop-types'
 /**
  * Transmits data and id to UserActivityDataItem component
  * 
@@ -24,17 +24,27 @@ import UserActivityDataItem from '../UserActivityDataItem'
  * id which was passed in the url
  * @returns { Component } UserActivityDataItem with id and data.sessions as userId and sessions props
  */
-function UserActivityData(props) {
-     return (
+function UserActivityData({ data, id }) {
+    return (
         <>
-                 <div className='sportSee-activity'>
-                    <UserActivityDataItem
-                        userId={props.id}
-                        sessions={props.data.sessions}
-                    />
-                </div>
-         </>
+            <div className='sportSee-activity'>
+                <UserActivityDataItem
+                    userId={data.id}
+                    sessions={data.sessions}
+                />
+            </div>
+        </>
     )
 };
+UserActivityData.proptype = {
+    /**
+     * id is number not required
+     */
+    id: PropTypes.number,
+    /**
+     * data is an Object of {userId, sessions[{day,  kilogram, calories}]}
+     */
+    data: PropTypes.object.isRequired
+}
 
 export default UserActivityData

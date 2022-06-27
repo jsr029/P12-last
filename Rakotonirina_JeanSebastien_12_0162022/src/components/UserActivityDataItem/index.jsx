@@ -1,41 +1,43 @@
 import React from 'react'
 import DBarChart from '../DBarChart'
+import PropTypes from 'prop-types'
 
 /**
  * Displays datas userId and sessions for DBarChart component
  * @param { Number } userId props user id
- * @param { Object } sessions props user sessions
- * {
-    "userId": 12,
-    "sessions": [
-        {
-            "day": "2020-07-01",
-            "kilogram": 80,
-            "calories": 240
-        },
-        etc...
-    ]
-}
+ * @param { Array } sessions props user sessions
  * @return { Component } DBarChart with sessions as props sessions
  */
-function UserActivityDataItem(props){
-    let sessionsDay = []
+function UserActivityDataItem({ userId, sessions }){
+     let sessionsDay = []
     let sessionsKg = []
     let sessionsCal = []    
 
-    for(let i=0; i < props.sessions.length; i++){
-        sessionsDay.push(props.sessions[i].day)
-        sessionsKg.push(props.sessions[i].kilogram)
-        sessionsCal.push(props.sessions[i].calories)
+    for(let i=0; i < sessions.length; i++){
+        sessionsDay.push(sessions[i].day)
+        sessionsKg.push(sessions[i].kilogram)
+        sessionsCal.push(sessions[i].calories)
     }
     
     return (
         <>
             <div className='sportSee-activity-item'>
-                <DBarChart sessions={props.sessions} />
+                <DBarChart sessions={sessions} />
             </div>
          </>    
     )
 }
-
+UserActivityDataItem.propTypes = {
+    /**
+     * sessions array of [day, kilogram, calories] all required
+     */
+    sessions : PropTypes.arrayOf(PropTypes.shape({
+        /** day is date */
+        day: PropTypes.string.isRequired,
+        /** kilogram is number */
+        kilogram: PropTypes.number.isRequired,
+        /** calories us number */
+        calories: PropTypes.number.isRequired
+    })).isRequired
+}
 export default UserActivityDataItem

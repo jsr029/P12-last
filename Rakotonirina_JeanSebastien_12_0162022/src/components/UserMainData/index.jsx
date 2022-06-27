@@ -8,7 +8,7 @@ import PropTypes from 'prop-types'
 /** 
  * Retrieves all data we need from all endpoints
  *  * 
- * @param { Object } props 
+ * @param { Object } datas 
  * {datas:{datas:{id,userInfos{...}, score, keyData:{...}},
  * {userId, sessions:Array(7)},
  * {userId, kind:{...}, data:Array(6)},
@@ -21,12 +21,12 @@ import PropTypes from 'prop-types'
  * - RightBloc
 */
 
-function UserMainData(props) {
-    const USERMAINNAME = props.datas.datas[0].userInfos.firstName
-    const USERMAINCAL = props.datas.datas[0].keyData.calorieCount
-    const USERMAINPRO = props.datas.datas[0].keyData.proteinCount
-    const USERMAINCAR = props.datas.datas[0].keyData.carbohydrateCount
-    const USERMAINLIP = props.datas.datas[0].keyData.lipidCount
+function UserMainData({ datas }) {
+    const USERMAINNAME = datas.datas[0].userInfos.firstName
+    const USERMAINCAL = datas.datas[0].keyData.calorieCount
+    const USERMAINPRO = datas.datas[0].keyData.proteinCount
+    const USERMAINCAR = datas.datas[0].keyData.carbohydrateCount
+    const USERMAINLIP = datas.datas[0].keyData.lipidCount
     /** end Datas.data.datas */
 
     return (
@@ -36,12 +36,12 @@ function UserMainData(props) {
                 <p>Félicitation ! Vous avez explosé vos objectifs hier <span role='img' aria-label='emoji'>👏</span></p>
                 <div className='spotSee-main-bloc'>
                     <div className='sportSee-main-graph'>
-                        <GetUserActivityData id={props.datas.datas[0].id} data={props.datas.datas[1]} />
+                        <GetUserActivityData data={datas.datas[1]} />
                         <div className='sportSee-main-grapBloc'>
-                            <GetUserSessionsData id={props.datas.datas[0].id}  data={props.datas.datas[3]} />
-                            <GetUserPerformance  id={props.datas.datas[0].id}  data={props.datas.datas[2]} />
+                            <GetUserSessionsData data={datas.datas[3]} />
+                            <GetUserPerformance  data={datas.datas[2]} />
                             <div className='sportSee-score'>
-                                <RPieChart scoreUser={props.datas.datas[0]} />
+                                <RPieChart scoreUser={datas.datas[0]} />
                             </div>
                         </div>
                     </div>
@@ -57,10 +57,9 @@ function UserMainData(props) {
     )
 };
 UserMainData.propTypes = {
-    USERMAINNAME : PropTypes.string,
-    USERMAINCAL : PropTypes.number,
-    USERMAINCAR : PropTypes.number,
-    USERMAINLIP : PropTypes.number,
-    USERMAINPRO : PropTypes.number
+    /**
+     * datas is array of {id, userInfos{}, score, keyData}, {userId, sessions[]}, {userId, kind{}, data[]}, {userId, sessions[]}
+     */
+    datas : PropTypes.object.isRequired
 }
 export default UserMainData

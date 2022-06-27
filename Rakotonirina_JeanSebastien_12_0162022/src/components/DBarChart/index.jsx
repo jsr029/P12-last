@@ -78,20 +78,7 @@ DBarChart.propTypes = {
    * data is an object
    */
   data: PropTypes.object,
-    /**
-   * sessions is an array of day (date string type)
-   * kilogram and calories (number type) is required
-   */
-  sessions : PropTypes.arrayOf(PropTypes.shape({
-    /** day is string (date) is required*/
-    day: PropTypes.string.isRequired,
-    /**kilogram is number is required */
-    kilogram: PropTypes.number.isRequired,
-    /**calorioes is number is required */
-    calories: PropTypes.number.isRequired,
-  })).isRequired,
-
-/**
+  /**
    * dates is an array of dates
    */
   dates: PropTypes.arrayOf(
@@ -108,6 +95,15 @@ DBarChart.propTypes = {
    */
   cals: PropTypes.arrayOf(
     PropTypes.instanceOf(Number).isRequired
-  )
+  ),
+  sessions : PropTypes.arrayOf(PropTypes.shape({
+    /** day is date */
+    day: PropTypes.string.isRequired,
+    /** kilogram is number */
+    kilogram: PropTypes.number.isRequired,
+    /**calories is number */
+    calories: PropTypes.number.isRequired,
+  })).isRequired,
+
 }
 export default DBarChart;
