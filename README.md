@@ -28,6 +28,6 @@ I encountered a lot of issues :
 2. babel issues
 <div><img src="https://github.com/jsr029/P12-last/blob/master/babelIssue.PNG" alt="babel issues" /></div>
 3. jshint issues <div><img src="https://github.com/jsr029/P12-last/blob/master/jshintIssues.PNG" alt="jshint issue" /></div>
-4. npm start issues
+4. npm start issues <div><img src="https://github.com/jsr029/P12-last/blob/master/npmStartIssue.PNG" alt="npm start issues" /></div>
 5. etc...
 
