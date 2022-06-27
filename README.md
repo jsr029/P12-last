@@ -37,5 +37,6 @@ I encountered a lot of issues :
 - npm i --save-dev @types/react-dom @types/react
 
 # For this dashboard app, I needed to add some dependencies
-let's have a look at my package.json
+let's have a look at my frontend package.json
+<img src="" alt="package.json" />
 
