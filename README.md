@@ -29,7 +29,8 @@ I encountered a lot of issues :
 5. etc...
 
 # How to get rid of those issues ?
-- yarn install and even if npm start doesn't work, try yarn start
+- yarn add instead of npm install
+- and even if npm start doesn't work, try yarn start
 - npm i react-dom react
 - npm i --save-dev @types/react-dom @types/react
 
@@ -40,3 +41,4 @@ let's have a look at my frontend package.json
 # jsDocs
 [Here](https://jsr029.github.io/P12-last/Rakotonirina_JeanSebastien_12_0162022/docs/)
 
+# Enjoy it
