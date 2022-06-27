@@ -18,8 +18,12 @@ Create a Dashboard app with React
 2- npm install it
 
 # Ocean's 12
-React is always a big adventure, cause you need to be careful about the dependencies. It's like your trip bag, don't forget your toothpaste !
-I encountered a lot of issues 
+React is always a big adventure, cause you need to be careful about the dependencies. 
+
+It's like your trip bag, don't forget your toothpaste !
+
+I encountered a lot of issues :
+
 1. vscode crashed after cancelling all changes cause needed action
 2. babel issues
 3. jshint issues
