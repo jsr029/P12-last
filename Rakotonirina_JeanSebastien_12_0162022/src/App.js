@@ -11,7 +11,7 @@ import NotFound from './components/NotFound'
  *  - '/' calls ChooseUserId component page 
  *  - '/:id' calls GetUserMainData component page
  *  - No path calls component NotFound to display error 404
- *
+ *  @return { Component }  SwitchBetweenApiAndMock, ChooseUserId, NotFound
  */
 function App() {
    return (

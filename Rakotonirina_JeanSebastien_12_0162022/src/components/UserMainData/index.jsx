@@ -22,7 +22,7 @@ import PropTypes from 'prop-types'
 */
 
 function UserMainData({ datas }) {
-    const USERMAINNAME = datas.datas[0].userInfos.firstName
+     const USERMAINNAME = datas.datas[0].userInfos.firstName
     const USERMAINCAL = datas.datas[0].keyData.calorieCount
     const USERMAINPRO = datas.datas[0].keyData.proteinCount
     const USERMAINCAR = datas.datas[0].keyData.carbohydrateCount

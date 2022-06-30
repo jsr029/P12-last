@@ -28,14 +28,14 @@ function RRadarChart({ perfData }) {
     }
       
         return (
-            <ResponsiveContainer width="100%" height={300}>
-            <RadarChart 
+            <ResponsiveContainer width="95%" height={300}>
+            <RadarChart
                 outerRadius="60%" data={data}
                 >
                 <PolarGrid />
                 <PolarAngleAxis dataKey="name" stroke="white" />
                 <Legend />
-                <Radar dataKey="min" stroke="#FF0101" 
+                <Radar dataKey="min" stroke="#FF0101" domain={['auto', 'auto']}
                     fill="#FF0101" fillOpacity={0.7} />
             </RadarChart>
             </ResponsiveContainer>

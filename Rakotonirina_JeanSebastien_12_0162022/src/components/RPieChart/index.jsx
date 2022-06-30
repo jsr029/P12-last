@@ -6,7 +6,7 @@ import PropTypes from 'prop-types'
  * @param { Object } scoreUser {id:, userInfos{firstName}, score, keyData{caloriesCount, etc..}}*
  * @returns { Component } PieChart component from Recharts library
  */
-const RPieChart = ({ scoreUser }) => { 
+const RPieChart = ({ scoreUser }) => {
         const score = scoreUser.score * 100
         // Sample data
         const data = [
@@ -22,8 +22,8 @@ const RPieChart = ({ scoreUser }) => {
                 <>
                 <h2 className='sportSee-pie'><span className='sportSee-pie-scoreTitle'>{score}%</span> 
                 <br /> <span className="sportSee-pie-scoreText">de votre <br /> objectif</span></h2>
-                <ResponsiveContainer width="100%" height={300}>
-                <PieChart width={340} height={340}>
+                <ResponsiveContainer width="95%" height={300}>
+                <PieChart >
                         <Pie 
                         data={data} 
                         dataKey="score" 

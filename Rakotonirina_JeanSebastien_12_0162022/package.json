@@ -6,6 +6,7 @@
     "@testing-library/jest-dom": "^5.16.4",
     "@testing-library/react": "^17.0.2",
     "@testing-library/user-event": "^17.0.2",
+    "axios": "^0.27.2",
     "better-docs": "^2.3.2",
     "bloomer": "^0.6.5",
     "jsdoc": "^3.6.10",

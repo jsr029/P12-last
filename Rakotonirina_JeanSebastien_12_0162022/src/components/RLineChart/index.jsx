@@ -28,10 +28,9 @@ function RLineChart({ sessions }) {
             <h2 className="text-sessions">
                 Duréee Moyenne <br/>des Sessions
             </h2>
-            <ResponsiveContainer width="100%" height={300}>
+            <ResponsiveContainer width="95%" height={300}>
                 <LineChart data={pdata} 
-                width="100%" 
-                height={340} 
+               height={340} 
                 margin={{ top:0, bottom:0, right: 5, left:-55 }} 
                 stroke="white"
                 >

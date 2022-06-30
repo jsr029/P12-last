@@ -46,19 +46,19 @@ function DBarChart({ sessions }) {
    return (
     <>
       <h2>Activité quotidienne</h2>
-      <ResponsiveContainer width="100%" height={320}>
-          <BarChart
+      <ResponsiveContainer width="95%" height={320}>
+          <BarChart 
           data={data}
             margin={{
               top: -24,
-              right: 29,
-              left: 32,
+              right: -35,
+              left: 24,
               bottom: 23
             }}
           >
-      <CartesianGrid strokeDasharray="3 3" />
+      <CartesianGrid strokeDasharray="5 5" />
       <XAxis dataKey="name" />
-      <YAxis />
+      <YAxis orientation="right" />
       <Tooltip wrapperStyle={{ fontFamily: 'Roboto, sans-serif' }} />
       <Legend         
         wrapperStyle={{ fontFamily: 'Roboto, sans-serif' }}

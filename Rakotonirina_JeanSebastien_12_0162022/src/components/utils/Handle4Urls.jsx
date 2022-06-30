@@ -1,5 +1,11 @@
 import { useEffect, useState } from "react";
+import PropTypes from 'prop-types'
 
+/**
+ * Gets data from Api 
+ * @param { Number } id user id passed in form
+ * @returns { Object } data{}, isLoading(boolean), error(boolean)
+ */
 function Handle4Urls(id) {
     const [data, setData] = useState({})
     const [isLoading, setIsLoading] = useState(true)
@@ -24,7 +30,7 @@ function Handle4Urls(id) {
             )
             ).then(data => {
             setData({
-                datas: [].concat(...data)
+                datas: {...data}
             });
             setIsLoading(false)
         });
@@ -32,5 +38,10 @@ function Handle4Urls(id) {
    
         return { data, isLoading, error }
 }
-  
+  Handle4Urls.propTypes = {
+    /**
+     * user id passed in form
+     */
+    id : PropTypes.number.isRequired
+  }
 export default Handle4Urls 

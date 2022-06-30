@@ -2,12 +2,6 @@ import {
     useState, useEffect
 } from "react";
 
-/**
- * Switches between 2 ids and in each switches betwween 4 urls endPoints
- * @param { Number } id props user id
- * @param { Url } url endPoints url
- * @returns { Object } data (object), isLoading (boolean), error, url (string)
- */
 function HandleChange(id, url) {
     
     /**

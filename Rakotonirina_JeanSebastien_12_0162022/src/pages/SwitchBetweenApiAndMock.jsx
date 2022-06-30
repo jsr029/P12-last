@@ -12,7 +12,7 @@ const SwitchBetweenApiAndMock = () => {
     /**
      * Retrieves the id passed in the url
      */
-    const id = useParams().id
+    const id = parseInt(useParams().id)
     /**
      * switches to Api event 
      */
@@ -20,7 +20,6 @@ const SwitchBetweenApiAndMock = () => {
     /**
      * Switches to MockedApi
      */
-    const [mockedapi, setMockedApi] = useState(false);
     /**
      * Switches to api data
      */
@@ -28,30 +27,32 @@ const SwitchBetweenApiAndMock = () => {
     /**
      * Switches to mocked api data
      */
-    const [data3, setData3] = useState({})
-    /**
-     * Retrieves mocked api data from HandleMockedData function 
-     */
-    const {  mockedData, isPending, error2 } = HandleMockedData(id)
-     const mockedapiHandler = () => {
-        setApi(false);
-        setMockedApi(true);
-        setData3({ mockedData, isPending, error2 })
-    };
+    let [data3, setData3] = useState({})
+    const [mockedapi, setMockedApi] = useState(false);
+    const [hideBySass, setHideBySass] = useState(false)
+    function handleHide(){
+        setHideBySass((prevState) => (!prevState ))
+    }    
    /**
      * Retrieves api data from Handle4Urls function by id
      */
     const { data, isLoading, error } = Handle4Urls(id)
-        //console.clear()
-    const [hideBySass, setHideBySass] = useState(false)
-    function handleHide(){
-        setHideBySass((prevState) => (!prevState ))
-    }
+    /**
+     * Retrieves mocked api data from HandleMockedData function 
+     */
+    const {  mockedData, isPending, error2 } = HandleMockedData(id)
     const apiHandler = () => {
         setApi(true);
         setMockedApi(false);
         setData2({ data, isLoading, error })
         };
+     const mockedapiHandler = () => {
+        setApi(false);
+        setMockedApi(true);
+        setData3({ mockedData, isPending, error2 })
+    };
+        //console.clear()
+
      return (
         <React.Fragment>
         <div className={"sportSee-switcher-button " + (hideBySass ? "visible" : "hidden")}>
