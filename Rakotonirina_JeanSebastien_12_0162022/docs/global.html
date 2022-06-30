@@ -825,121 +825,6 @@ etc..
 
 
 
-    <h5 class="subsection-title">Properties:</h5>
-
-    
-
-<table class="props">
-    <thead>
-    <tr>
-        
-        <th>Name</th>
-        
-
-        <th>Type</th>
-
-        
-        <th>Attributes</th>
-        
-
-        
-
-        <th class="last">Description</th>
-    </tr>
-    </thead>
-
-    <tbody>
-    
-
-        <tr>
-            
-                <td class="name"><code>mockedData</code></td>
-            
-
-            <td class="type">
-            
-                
-            
-            </td>
-
-            
-                <td class="attributes">
-                
-                    &lt;optional><br>
-                
-
-                
-                </td>
-            
-
-            
-
-            <td class="description last">mockedData datas from Mocked Api in an Object</td>
-        </tr>
-
-    
-
-        <tr>
-            
-                <td class="name"><code>isPending</code></td>
-            
-
-            <td class="type">
-            
-                
-            
-            </td>
-
-            
-                <td class="attributes">
-                
-                    &lt;optional><br>
-                
-
-                
-                </td>
-            
-
-            
-
-            <td class="description last">is Pendig is boolean</td>
-        </tr>
-
-    
-
-        <tr>
-            
-                <td class="name"><code>error2</code></td>
-            
-
-            <td class="type">
-            
-                
-            
-            </td>
-
-            
-                <td class="attributes">
-                
-                    &lt;optional><br>
-                
-
-                
-                </td>
-            
-
-            
-
-            <td class="description last">error2 is boolean</td>
-        </tr>
-
-    
-    </tbody>
-</table>
-
-
-
-
 <dl class="details">
 
     
@@ -1473,7 +1358,7 @@ by an endPoints url</p></td>
     
 
     
-    <h4 class="name" id="HandleChange"><span class="type-signature"></span>HandleChange<span class="signature">(id, url)</span><span class="type-signature"> &rarr; {Object}</span></h4>
+    <h4 class="name" id="Handle4Urls"><span class="type-signature"></span>Handle4Urls<span class="signature">(id)</span><span class="type-signature"> &rarr; {Object}</span></h4>
     
 
     
@@ -1481,7 +1366,7 @@ by an endPoints url</p></td>
 
 
 <div class="description">
-    <p>Switches between 2 ids and in each switches betwween 4 urls endPoints</p>
+    <p>Gets data from Api</p>
 </div>
 
 
@@ -1533,20 +1418,215 @@ by an endPoints url</p></td>
 
             
 
-            <td class="description last"><p>props user id</p></td>
+            <td class="description last"><p>user id passed in form</p></td>
         </tr>
 
+    
+    </tbody>
+</table>
+
+
+
+
+
+
+    <h5 class="subsection-title">Properties:</h5>
+
+    
+
+<table class="props">
+    <thead>
+    <tr>
+        
+        <th>Name</th>
+        
+
+        <th>Type</th>
+
+        
+        <th>Attributes</th>
+        
+
+        
+
+        <th class="last">Description</th>
+    </tr>
+    </thead>
+
+    <tbody>
     
 
         <tr>
             
-                <td class="name"><code>url</code></td>
+                <td class="name"><code>id</code></td>
             
 
             <td class="type">
             
                 
-<span class="param-type">Url</span>
+            
+            </td>
+
+            
+                <td class="attributes">
+                
+                    &lt;optional><br>
+                
+
+                
+                </td>
+            
+
+            
+
+            <td class="description last">user id passed in form</td>
+        </tr>
+
+    
+    </tbody>
+</table>
+
+
+
+
+<dl class="details">
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+    <dt class="tag-source">Source:</dt>
+    <dd class="tag-source"><ul class="dummy"><li>
+        <a href="components_utils_Handle4Urls.jsx.html">components/utils/Handle4Urls.jsx</a>, <a href="components_utils_Handle4Urls.jsx.html#line9">line 9</a>
+    </li></ul></dd>
+    
+
+    
+
+    
+
+    
+</dl>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<h5>Returns:</h5>
+
+        
+<div class="param-desc">
+    <p>data{}, isLoading(boolean), error(boolean)</p>
+</div>
+
+
+
+<dl>
+    <dt>
+        Type
+    </dt>
+    <dd>
+        
+<span class="param-type">Object</span>
+
+
+    </dd>
+</dl>
+
+    
+
+
+
+
+
+        
+            
+
+    
+
+    
+    <h4 class="name" id="HandleMockedData"><span class="type-signature"></span>HandleMockedData<span class="signature">(id)</span><span class="type-signature"> &rarr; {Object}</span></h4>
+    
+
+    
+
+
+
+<div class="description">
+    <p>Gets datas from mocked Api</p>
+</div>
+
+
+
+
+
+
+
+
+
+    <h5>Parameters:</h5>
+    
+
+<table class="params">
+    <thead>
+    <tr>
+        
+        <th>Name</th>
+        
+
+        <th>Type</th>
+
+        
+
+        
+
+        <th class="last">Description</th>
+    </tr>
+    </thead>
+
+    <tbody>
+    
+
+        <tr>
+            
+                <td class="name"><code>id</code></td>
+            
+
+            <td class="type">
+            
+                
+<span class="param-type">Number</span>
 
 
             
@@ -1556,7 +1636,7 @@ by an endPoints url</p></td>
 
             
 
-            <td class="description last"><p>endPoints url</p></td>
+            <td class="description last"><p>user id</p></td>
         </tr>
 
     
@@ -1597,7 +1677,7 @@ by an endPoints url</p></td>
     
     <dt class="tag-source">Source:</dt>
     <dd class="tag-source"><ul class="dummy"><li>
-        <a href="components_utils_HandleChange.jsx.html">components/utils/HandleChange.jsx</a>, <a href="components_utils_HandleChange.jsx.html#line11">line 11</a>
+        <a href="components_utils_HandleMockedData.jsx.html">components/utils/HandleMockedData.jsx</a>, <a href="components_utils_HandleMockedData.jsx.html#line11">line 11</a>
     </li></ul></dd>
     
 
@@ -1626,7 +1706,7 @@ by an endPoints url</p></td>
 
         
 <div class="param-desc">
-    <p>data (object), isLoading (boolean), error, url (string)</p>
+    <p>mockedData, isPending, error2</p>
 </div>
 
 
@@ -5102,13 +5182,13 @@ etc...
 </div>
 
 <nav>
-    <h2><a href="index.html">Home</a></h2><h3>Global</h3><ul><li><a href="global.html#App">App</a></li><li><a href="global.html#DBarChart">DBarChart</a></li><li><a href="global.html#GetUserActivityData">GetUserActivityData</a></li><li><a href="global.html#GetUserMainData">GetUserMainData</a></li><li><a href="global.html#GetUserPerformance">GetUserPerformance</a></li><li><a href="global.html#GetUserSessionsData">GetUserSessionsData</a></li><li><a href="global.html#HandleChange">HandleChange</a></li><li><a href="global.html#HorizontalMenu">HorizontalMenu</a></li><li><a href="global.html#NotFound">NotFound</a></li><li><a href="global.html#RightBloc">RightBloc</a></li><li><a href="global.html#RLineChart">RLineChart</a></li><li><a href="global.html#RPieChart">RPieChart</a></li><li><a href="global.html#RRadarChart">RRadarChart</a></li><li><a href="global.html#SwitchBetweenApiAndMock">SwitchBetweenApiAndMock</a></li><li><a href="global.html#UserActivityData">UserActivityData</a></li><li><a href="global.html#UserActivityDataItem">UserActivityDataItem</a></li><li><a href="global.html#UserMainData">UserMainData</a></li><li><a href="global.html#UserMainDataItem">UserMainDataItem</a></li><li><a href="global.html#UserPerformanceData">UserPerformanceData</a></li><li><a href="global.html#UserPerformanceItem">UserPerformanceItem</a></li><li><a href="global.html#UserSessionsData">UserSessionsData</a></li><li><a href="global.html#UserSessionsDataItem">UserSessionsDataItem</a></li><li><a href="global.html#VerticalMenu">VerticalMenu</a></li></ul>
+    <h2><a href="index.html">Home</a></h2><h3>Global</h3><ul><li><a href="global.html#App">App</a></li><li><a href="global.html#DBarChart">DBarChart</a></li><li><a href="global.html#GetUserActivityData">GetUserActivityData</a></li><li><a href="global.html#GetUserMainData">GetUserMainData</a></li><li><a href="global.html#GetUserPerformance">GetUserPerformance</a></li><li><a href="global.html#GetUserSessionsData">GetUserSessionsData</a></li><li><a href="global.html#Handle4Urls">Handle4Urls</a></li><li><a href="global.html#HandleMockedData">HandleMockedData</a></li><li><a href="global.html#HorizontalMenu">HorizontalMenu</a></li><li><a href="global.html#NotFound">NotFound</a></li><li><a href="global.html#RightBloc">RightBloc</a></li><li><a href="global.html#RLineChart">RLineChart</a></li><li><a href="global.html#RPieChart">RPieChart</a></li><li><a href="global.html#RRadarChart">RRadarChart</a></li><li><a href="global.html#SwitchBetweenApiAndMock">SwitchBetweenApiAndMock</a></li><li><a href="global.html#UserActivityData">UserActivityData</a></li><li><a href="global.html#UserActivityDataItem">UserActivityDataItem</a></li><li><a href="global.html#UserMainData">UserMainData</a></li><li><a href="global.html#UserMainDataItem">UserMainDataItem</a></li><li><a href="global.html#UserPerformanceData">UserPerformanceData</a></li><li><a href="global.html#UserPerformanceItem">UserPerformanceItem</a></li><li><a href="global.html#UserSessionsData">UserSessionsData</a></li><li><a href="global.html#UserSessionsDataItem">UserSessionsDataItem</a></li><li><a href="global.html#VerticalMenu">VerticalMenu</a></li></ul>
 </nav>
 
 <br class="clear">
 
 <footer>
-    Documentation generated by <a href="https://github.com/jsdoc/jsdoc">JSDoc 3.6.10</a> on Thu Jun 30 2022 08:10:41 GMT+0200 (heure d’été d’Europe centrale)
+    Documentation generated by <a href="https://github.com/jsdoc/jsdoc">JSDoc 3.6.10</a> on Thu Jun 30 2022 12:57:20 GMT+0200 (heure d’été d’Europe centrale)
 </footer>
 
 <script> prettyPrint(); </script>

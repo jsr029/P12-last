@@ -2,7 +2,7 @@
 <html lang="en">
 <head>
     <meta charset="utf-8">
-    <title>JSDoc: Source: components/UserSessionsDataIem/index.jsx</title>
+    <title>JSDoc: Source: components/utils/HandleMockedData.jsx</title>
 
     <script src="scripts/prettify/prettify.js"> </script>
     <script src="scripts/prettify/lang-css.js"> </script>
@@ -17,7 +17,7 @@
 
 <div id="main">
 
-    <h1 class="page-title">Source: components/UserSessionsDataIem/index.jsx</h1>
+    <h1 class="page-title">Source: components/utils/HandleMockedData.jsx</h1>
 
     
 
@@ -26,43 +26,47 @@
     
     <section>
         <article>
-            <pre class="prettyprint source linenums"><code>import React from 'react'
-import { Line } from 'react-chartjs-2'
-
+            <pre class="prettyprint source linenums"><code>import {
+  useState, useEffect
+} from "react";
+import PropTypes from 'prop-types'
 
 /**
- * Transmits user average-sessions data to Line component
- * @param { Numnber } userId props user id 
- * @param { Object } sessions props average-sessions
- * @returns { Component } Line component from recharts library
+ * Gets datas from mocked Api
+ * @param { Number } id user id
+ * @returns { Object } mockedData, isPending, error2
  */
-function UserSessionsDataItem({ userId, sessions }){
-    let averageSessionDay = []
-    let averageSessionLength = []
-    for(let i=0; i &lt; sessions.length; i++){
-        averageSessionDay.push(sessions[i].day)
-        averageSessionLength.push(sessions[i].sessionLength)
-    }
-    const data = {
-        labels: ['L', 'M', 'M', 'J', 'V', 'S', 'D'],
-        datasets:[
-            {
-                label : "Durée Moyenne des Sessions",
-                data: averageSessionLength,
-                backgroundColor:['#FF0101']
-            }
-        ]
-    }
-    return (
-        &lt;>
-                &lt;div className={'sportSee-sessions-item'}>
-                    &lt;Line data={data} />
-                &lt;/div>
-         &lt;/>    
-    )
-}
+function HandleMockedData(id) {
+  const [mockedData, setMockedData] = useState({})
+  const [isPending, setIsPending] = useState(false)
+  const [error2, setError2] = useState(false)
+  const urls = [`http://127.0.0.1:3000/mockedjson/${id}.json`]
 
-export default UserSessionsDataItem</code></pre>
+  useEffect(() => {
+    fetch(urls, {
+      headers: { 'Content-type': 'application/json' },
+      mode: 'no-cors'
+    })
+      .then(res => {
+        return res.json()
+      })
+      .then(data => {
+        setMockedData(data);
+        setIsPending(false)
+      })
+      .catch(err => {
+        setError2(err.message)
+      })
+  }, [])
+  return { mockedData, isPending, error2 }
+}
+HandleMockedData.propType = {
+  /**
+   * user id passed in form
+   */
+  id: PropTypes.number.isRequired
+}
+export default HandleMockedData;</code></pre>
         </article>
     </section>
 
