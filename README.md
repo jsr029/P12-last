@@ -5,16 +5,19 @@ Openclassrooms project 12 : Developp an analytics dashboard with react
 Create a Dashboard app with React
 
 # Install
-- Backend
+- git clone https://github.com/jsr029/P12-last.git
 
-1. git clone the backend, using its repository https://github.com/OpenClassrooms-Student-Center/P9-front-end-dashboard.git more details on its github page
-2. npm install
-3. yarn dev
+Backend : P9-front-end-dashbord
+- npm install 
+- yarn dev
+(The server will launch on port 5000)
 
-- Frontend
-1. clone the repository
-2. npm install
-3. npm start or yarn start
+Frontend : Rakotonirina_JeanSebastien_12_01062022
+- npm install
+- npm start ou yarn start
+(The server will launch on port 3000)
+![image](https://user-images.githubusercontent.com/78790620/176873694-aca85abc-2129-4161-8208-efb0ac4ede78.png)
+
 
 # Ocean's 12
 React is always a big adventure, cause you need to be careful about the dependencies. 
