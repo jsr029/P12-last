@@ -10,11 +10,13 @@ Create a Dashboard app with React
 Backend : P9-front-end-dashbord
 - npm install 
 - yarn dev
+
 (The server will launch on port 5000)
 
 Frontend : Rakotonirina_JeanSebastien_12_01062022
 - npm install
 - npm start ou yarn start
+
 (The server will launch on port 3000)
 
 # Ocean's 12
