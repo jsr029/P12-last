@@ -49,3 +49,4 @@ let's have a look at my frontend package.json
 [Here](https://jsr029.github.io/P12-last/Rakotonirina_JeanSebastien_12_0162022/docs/)
 
 # Algorigram
+<div><img src="https://github.com/jsr029/P12-last/algorigram.PNG" alt="algorigram" /></div>
