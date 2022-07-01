@@ -2,7 +2,7 @@
 Openclassrooms project 12 : Developp an analytics dashboard with react
 
 # What is the project 12 ?
-Create a Dashboard app with React
+Create an analytics Dashboard app with React
 
 # Install
 - git clone https://github.com/jsr029/P12-last.git
