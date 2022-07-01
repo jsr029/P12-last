@@ -16,8 +16,6 @@ Frontend : Rakotonirina_JeanSebastien_12_01062022
 - npm install
 - npm start ou yarn start
 (The server will launch on port 3000)
-![image](https://user-images.githubusercontent.com/78790620/176873694-aca85abc-2129-4161-8208-efb0ac4ede78.png)
-
 
 # Ocean's 12
 React is always a big adventure, cause you need to be careful about the dependencies. 
